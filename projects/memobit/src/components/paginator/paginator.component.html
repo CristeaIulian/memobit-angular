@@ -1,0 +1,13 @@
+<div class="memobit-paginator">
+  <mem-select [items]="recordsPerPageDropdownOptions" [selected]="recordsPerPage" (selectItems)="onRecordsPerPageChanged($event)"></mem-select>
+
+  <span>{{recordsFrom}}-{{recordsTo}} of {{numberOfRecords}}</span>
+  <div class="dire ction-buttons">
+    <button memButton memVariant="compact" [disabled]="currentPage === 0" (click)="onPageChanged('previous')">
+      <mem-icon icon="arrow-left" [size]="24"></mem-icon>
+    </button>
+    <button memButton memVariant="compact" [disabled]="recordsTo === numberOfRecords" (click)="onPageChanged('next')">
+      <mem-icon icon="arrow-right" [size]="24"></mem-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.memobit-paginator {
+  display: flex;
+  column-gap: $s-16;
+  align-items: center;
+
+  .direction-buttons {
+    display: flex;
+    column-gap: $s-8;
+  }
+}

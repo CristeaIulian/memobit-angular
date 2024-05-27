@@ -1,0 +1,74 @@
+@import '../../styles/variables';
+@import '../../styles/theming';
+
+.toast {
+  padding: $s-16;
+  position: fixed;
+  max-width: 300px;
+  border-radius: $borderRadius;
+  transition: 0.5s;
+
+  &.toast-state-info {
+    color: $toastStateInfoColor;
+    background-color: $toastStateInfoBgColor;
+  }
+
+  &.toast-state-success {
+    color: $toastStateSuccessColor;
+    background-color: $toastStateSuccessBgColor;
+  }
+
+  &.toast-state-warning {
+    color: $toastStateWarningColor;
+    background-color: $toastStateWarningBgColor;
+  }
+
+  &.toast-state-error {
+    color: $toastStateErrorColor;
+    background-color: $toastStateErrorBgColor;
+  }
+
+  &.toast-position-top-left {
+    top: 20px;
+    left: 20px;
+  }
+
+  &.toast-position-top {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.toast-position-top-right {
+    top: 20px;
+    right: 20px;
+  }
+
+  &.toast-position-right {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+  }
+
+  &.toast-position-bottom-right {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &.toast-position-bottom {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.toast-position-bottom-left {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  &.toast-position-left {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+  }
+}

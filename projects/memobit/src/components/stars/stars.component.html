@@ -1,0 +1,5 @@
+<div class="stars-container">
+  <div *ngFor="let i of num | times" class="star">
+    <mem-icon [icon]="getStarType(num, i)" [size]="getSize(size) || 20"></mem-icon>
+  </div>
+</div>

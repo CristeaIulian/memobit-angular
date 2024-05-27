@@ -1,0 +1,40 @@
+<div class="mem-select" [ngClass]="{'mem-select-variant-compact': variant === 'compact'}">
+  <div class="mem-select-label" tabindex="0" [attr.placeholder]="placeholder" (click)="onLabelClick()" (keyup)="onKeyUp($event)">{{selectedValue}}</div>
+  <div class="mem-select-dropdown" *ngIf="isListVisible">
+    <div class="mem-select-filter" *ngIf="hasFilter && dataSet.length">
+      <mem-input-text placeholder="Search through the list" [value]="filterText" (inputText)="onFilterList($event)"></mem-input-text>
+    </div>
+    <div class="mem-select-list">
+      <ng-container *ngIf="!multiple">
+        <ng-container *ngFor="let item of dataSetFiltered">
+          <div [ngClass]="{'active': item.isSelected && item.id}" (click)="onItemSelected(item)">
+            <label>
+              <ng-container *ngIf="!item.tag">{{item.label}}</ng-container>
+              <mem-tag *ngIf="item.tag" [tag]="item.tag"></mem-tag>
+            </label>
+          </div>
+        </ng-container>
+      </ng-container>
+      <ng-container *ngIf="multiple">
+        <ng-container *ngFor="let item of dataSetFiltered">
+          <div class="mem-select-item" [ngClass]="{'active': item.isSelected}">
+            <input
+              [id]="'mem-select-' + item.id"
+              [value]="item.id"
+              type="checkbox"
+              [checked]="item.isSelected ? 'checked' : ''"
+              (click)="onItemsSelected(item, $event)"
+            />
+            <label [for]="'mem-select-' + item.id">
+              <ng-container *ngIf="!item.tag">{{item.label}}</ng-container>
+              <mem-tag *ngIf="item.tag" [tag]="item.tag"></mem-tag>
+            </label>
+          </div>
+        </ng-container>
+      </ng-container>
+      <div *ngIf="!dataSetFiltered.length && !dataSet.length">There are no results</div>
+      <div *ngIf="!dataSetFiltered.length && dataSet.length">There are no results, try changing filters</div>
+    </div>
+  </div>
+  <mem-icon class="mem-select-down-arrow" icon="caret-down-outline" [size]="24"></mem-icon>
+</div>

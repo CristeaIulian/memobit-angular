@@ -1,0 +1,45 @@
+@import 'index'; // memobit styles @Todo: these should not be here...
+@import 'variables'; // memobit variables
+
+body {
+  /* width */
+  ::-webkit-scrollbar {
+    width: $s-4;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: $scrollbarTrackBgColor;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, $scrollbarThumbBgColor1 0%, $scrollbarThumbBgColor2 30%);
+    border-radius: $borderRadius;
+
+    &:hover {
+      background-color: $scrollbarThumbHoverBgColor;
+    }
+  }
+}
+
+body {
+  color: $bodyColor;
+  background-color: $bodyBgColor;
+  font-size: $bodyFs;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  margin: 0;
+
+  a {
+    color: $bodyColor;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.disable-scroll {
+    height: 100%;
+    overflow-y: hidden;
+  }
+}

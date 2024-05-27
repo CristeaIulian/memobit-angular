@@ -1,0 +1,7 @@
+{
+  "license": "MIT",
+  "author": "Iulian Cristea",
+  "name": "mem-scroll-to-top",
+  "version": "1.0.0",
+  "main": "./public-api.ts"
+}

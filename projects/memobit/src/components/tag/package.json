@@ -1,0 +1,7 @@
+{
+  "license": "MIT",
+  "author": "Iulian Cristea",
+  "name": "mem-tag",
+  "version": "1.0.0",
+  "main": "./public-api.ts"
+}

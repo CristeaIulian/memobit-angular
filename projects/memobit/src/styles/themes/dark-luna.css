@@ -1,0 +1,161 @@
+:root {
+  /* generics */
+  --boxShadow: none;
+  --borderRadius: 0;
+  --borderRadiusSmall: 0;
+  --borderRadiusExtraSmall: 0;
+
+  /* standard */
+  --bodyColor: #949ba2;
+  --bodyBgColor: #2d3038;
+  --bodyFs: 14px;
+
+  --linkColor: #f6a821;
+  --linkHoverColor: #f8bb52;
+  --linkHoverBgColor: transparent;
+
+  --scrollbarTrackBgColor: #3e3216;
+  --scrollbarThumbBgColor1: #c57f04;
+  --scrollbarThumbBgColor2: #372605;
+  --scrollbarThumbHoverBgColor: #93671b;
+
+  --radioIconColor: #f6a821;
+
+  --backdropBgColor: #000000;
+  --textShadowColor: #000000;
+
+  --rippleBgColor: #ffffffb3;
+
+  --actorTileBgColor: #383b44;
+
+  --buttonActiveBgColor: #c78514;
+  --buttonBgColor: #2f323a;
+  --buttonBorder: 1px solid #2f323a;
+  --buttonColor: #ffffff;
+  --buttonDisabledBgColor: #2c2e34;
+  --buttonHoverBgColor: #3d404c;
+  --buttonHoverBorder: 1px solid #616779;
+  --buttonVariantContainedBorderColor: #616779;
+
+  --cardBgColor: #44464f80;
+  --cardBorderColor: #44464f80;
+  --cardHeaderColor: #ffffff;
+  --cardHeaderFs: 13px;
+  --cardHeaderTextTransform: none;
+
+  --contextualMenuBgColor: #2f323a;
+  --contextualMenuBorderColor: #2f323a;
+  --contextualMenuButtonHoverBgColor: #6167791a;
+
+  --dataGridImageBoxShadow: none;
+  --dataGridImageMiniGradeBgColor: #311f00;
+  --dataGridTileBgColor: #383b44;
+  --dataGridTileBorderColor: #383b44;
+
+  --dataListColumnBorderBottomColor: #3d404c;
+  --dataListRowBgColor: #44464f;
+  --dataListRowEvenBgColor: #2f323b;
+  --dataListRowHoverBgColor: #494b54;
+
+  --dataPreviewSectionBgColor: #3b3e47;
+  --dataPreviewSectionBorderColor: #3b3e47;
+
+  --dataViewNoItemsBgColor: #2a2d35;
+  --dataViewNoItemsColor: #949ba2;
+  --dataViewNoItemsHoverBgColor: #2a2d35;
+
+  --delimiterBorderTopColor: #484c5a;
+
+  --drawerBgColor: #2a2d35;
+  --drawerBorderColor: #2a2d35;
+  --drawerListLinkActiveBgColor: #c78514;
+  --drawerListLinkActiveColor: #ffffff;
+  --drawerListLinkActiveFontWeight: 400;
+  --drawerListLinkActiveTextDecoration: none;
+  --drawerListLinkHoverBgColor: #c78514;
+  --drawerListLinkHoverColor: #ffffff;
+
+  --formFieldErrorColor: #db524b;
+  --formFieldHintColor: #ffffffb3;
+
+  --inputBgColor: #2f323a;
+  --inputBorderColor: #2f323a;
+  --inputColor: #949ba2;
+  --inputFocusBgColor: #52555f;
+  --inputFocusBorderColor: #52555f;
+  --inputHoverBgColor: #2f323a;
+  --inputPlaceholderBgColor: #6c757d;
+
+  --lightModalBgColor: #383b44;
+
+  --listCategoryBgColor: #282c34;
+  --listCategoryColor: #ffffff;
+  --listLinkColor: #949ba2;
+  --listLinkHoverBgColor: #6167791a;
+  --listLinkSelectedColor: #ffffff;
+  --listLinkSelectedBgColor: #f6a821;
+
+  --modalCloseButtonBgColor: #f6a821;
+  --modalCloseButtonBorderColor: #f6a821;
+  --modalCloseButtonColor: #ffffff;
+  --modalCloseButtonSize: 16px;
+  --modalContentBgColor: #21242a;
+  --modalHeaderBgColor: #1d1f24;
+  --modalHeaderBorderBottomColor: #1d1f24;
+  --modalHeaderTitleColor: #ffffff;
+  --modalHeaderTitleFs: 22px;
+  --modalHeaderTitlePadding: 24px 20px;
+  --modalHeaderTitleTextTransform: none;
+
+  --pageLoaderIndeterminateBgColor: #c57f04;
+  --pageLoaderIndeterminateFillBgColor: #372605;
+
+  --placeholderBgColor: #282c34;
+  --placeholderAccentColor: #ffffff;
+
+  --progressBarBgColor: #ffffff;
+  --progressBarBorder: 0;
+  --progressBarBorderRadius: 2px;
+  --progressBarFillBgColor: #f7af3e;
+  --progressBarFillHeight: 10px;
+  --progressBarHeight: 10px;
+  --progressBarTextAlign: left;
+  --progressBarTextFs: 12px;
+  --progressBarTextMarginTop: 15px;
+
+  --selectActiveBgColor: #f6a821;
+  --selectActiveColor: #ffffff;
+  --selectBorderColor: #2f323a;
+  --selectHoverBgColor: #6167791a;
+  --selectFocusBgColor: #52555f;
+  --selectFocusBorderColor: #52555f;
+  --selectItemBgColor: #2f323a;
+  --selectOptionsBorderColor: #2f323a;
+
+  --sortItemActiveBgColor: #2d3038;
+  --sortItemActiveColor: #3c3e47;
+  --sortItemHoverBgColor: #2d3038;
+  --sortItemHoverColor: #494b54;
+
+  --tagBgColor: #1d1f24;
+  --tagBorderColor: #1d1f24;
+  --tagColor: #f6a821;
+  --tagHoverBgColor: #24262d;
+  --tagHoverBorderColor: #24262d;
+  --tagHoverColor: #f6a821;
+  --tagOpacity: 1;
+  --tagPrimaryColor: #bb87fc;
+  --tagSecondaryColor: #fb773f;
+
+  --toastStateErrorBgColor: #db524b;
+  --toastStateErrorColor: #ffffff;
+  --toastStateInfoBgColor: #116a85;
+  --toastStateInfoColor: #ffffff;
+  --toastStateSuccessBgColor: #0c6547;
+  --toastStateSuccessColor: #ffffff;
+  --toastStateWarningBgColor: #c78514;
+  --toastStateWarningColor: #ffffff;
+
+  --tooltipBgColor: #c78514;
+  --tooltipColor: #ffffff;
+}

@@ -1,0 +1,28 @@
+@import '../../styles/theming';
+
+@mixin generate-icon-sizes($size) {
+  &.size-#{$size} {
+    width: #{$size}px;
+    height: #{$size}px;
+
+    ::ng-deep svg {
+      width: #{$size}px;
+      height: #{$size}px;
+    }
+  }
+}
+
+.mem-icon {
+  @include generate-icon-sizes(10);
+  @include generate-icon-sizes(12);
+  @include generate-icon-sizes(14);
+  @include generate-icon-sizes(16);
+  @include generate-icon-sizes(20);
+  @include generate-icon-sizes(24);
+  @include generate-icon-sizes(28);
+  @include generate-icon-sizes(30);
+  @include generate-icon-sizes(32);
+  @include generate-icon-sizes(36);
+  @include generate-icon-sizes(40);
+  @include generate-icon-sizes(48);
+}

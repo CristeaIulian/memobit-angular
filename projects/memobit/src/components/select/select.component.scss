@@ -1,0 +1,108 @@
+@import '../../styles/variables';
+@import '../../styles/theming';
+
+.mem-select {
+  position: relative;
+  min-width: 90px;
+
+  .mem-select-label {
+    background-color: $selectItemBgColor;
+    padding: $s-16 $s-32 $s-16 $s-16;
+    color: $inputColor;
+    border: 1px solid $selectBorderColor;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    height: $s-16;
+
+    &:empty:before {
+      content: attr(placeholder);
+      font-style: italic;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $selectFocusBgColor;
+      border: 1px solid $selectFocusBorderColor;
+    }
+
+    &:hover {
+      background-color: $selectHoverBgColor;
+      cursor: pointer;
+    }
+  }
+
+  &.mem-select-variant-compact {
+    .mem-select-label {
+      padding: 3px $s-8;
+      line-height: 22px;
+    }
+
+    .mem-select-down-arrow {
+      top: 0;
+    }
+  }
+
+  .mem-select-dropdown {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    box-shadow: $boxShadow;
+    border: 1px solid $selectOptionsBorderColor;
+    box-sizing: border-box;
+
+    .mem-select-filter {
+      background-color: $selectItemBgColor;
+      padding: $s-4;
+
+      mem-input-text {
+        width: 100%;
+      }
+    }
+
+    .mem-select-list {
+      max-height: 200px;
+      overflow: auto;
+      color: $inputColor;
+      background-color: $selectItemBgColor;
+
+      > div {
+        background-color: $selectItemBgColor;
+        padding: $s-8;
+        display: flex;
+        align-items: center;
+
+        input[type='checkbox'] {
+          margin: $s-8;
+        }
+
+        label {
+          flex: 1;
+          line-height: normal;
+          padding: $s-8;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &:hover {
+          background-color: $selectHoverBgColor;
+          cursor: pointer;
+        }
+
+        &.active {
+          color: $selectActiveColor;
+          background-color: $selectActiveBgColor;
+        }
+      }
+    }
+  }
+
+  .mem-select-down-arrow {
+    position: absolute;
+    right: $s-16;
+    top: 14px;
+    pointer-events: none;
+  }
+}

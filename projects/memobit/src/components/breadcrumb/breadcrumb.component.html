@@ -1,0 +1,7 @@
+<div class="breadcrumb">
+  <ng-container *ngFor="let item of items; index as $index">
+    <a *ngIf="item.path" [routerLink]="item.path">{{item.label}}</a>
+    <span *ngIf="!item.path">{{item.label}}</span>
+    <mem-icon *ngIf="items.length - 1 > $index" icon="chevron-right" [size]="24"></mem-icon>
+  </ng-container>
+</div>

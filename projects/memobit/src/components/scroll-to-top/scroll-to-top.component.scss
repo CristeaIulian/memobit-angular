@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+@import '../../styles/theming';
+
+.scroll-to-top-button {
+  position: fixed;
+  z-index: 100;
+  bottom: $s-8;
+  right: 29px;
+  opacity: 0.3;
+  transition: 0.5s;
+  border-radius: $borderRadius;
+  padding: $s-16 $s-8;
+
+  &:hover {
+    opacity: 1;
+  }
+}

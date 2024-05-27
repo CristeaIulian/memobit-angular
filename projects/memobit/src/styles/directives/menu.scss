@@ -1,0 +1,23 @@
+@import '../variables';
+@import '../theming';
+
+.mem-contextual-menu {
+  position: absolute;
+  z-index: 1000;
+  background-color: $contextualMenuBgColor;
+  border-radius: $borderRadiusSmall;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $contextualMenuBorderColor;
+  opacity: 0;
+  transition: 0.5s;
+
+  button {
+    padding: 10px $s-16 !important;
+    height: auto;
+
+    &:hover {
+      background-color: $contextualMenuButtonHoverBgColor !important;
+    }
+  }
+}

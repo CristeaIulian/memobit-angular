@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+@import '../../styles/theming';
+
+.mem-textarea {
+  position: relative;
+
+  textarea {
+    background-color: $inputBgColor;
+    border: 1px solid $inputBorderColor;
+    padding: $s-16;
+    color: $inputColor;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 90px;
+
+    &:hover {
+      background-color: $inputHoverBgColor;
+    }
+
+    &:focus {
+      border: 1px solid $inputFocusBorderColor;
+      background-color: $inputFocusBgColor;
+      outline: none;
+    }
+
+    &::placeholder {
+      font-style: italic;
+      font-size: $fs-14;
+      color: $inputPlaceholderBgColor;
+    }
+  }
+}

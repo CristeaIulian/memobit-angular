@@ -1,0 +1,7 @@
+{
+  "license": "MIT",
+  "author": "Iulian Cristea",
+  "name": "mem-input-number",
+  "version": "1.0.0",
+  "main": "./public-api.ts"
+}

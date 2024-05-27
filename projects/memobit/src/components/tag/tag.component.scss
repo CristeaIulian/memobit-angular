@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+@import '../../styles/theming';
+
+.tag {
+  border-radius: $borderRadius;
+  padding: $s-4 $s-8;
+  min-width: auto;
+  max-width: fit-content;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 1px solid $tagBorderColor;
+  background-color: $tagBgColor;
+  line-height: normal;
+
+  span {
+    opacity: $tagOpacity;
+    color: $tagColor;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: $fs-12;
+  }
+
+  &:hover {
+    background-color: $tagHoverBgColor;
+    border: 1px solid $tagHoverBorderColor;
+    cursor: default;
+
+    span {
+      color: $tagHoverColor;
+    }
+  }
+
+  ic-icon {
+    margin-right: 6px;
+    display: flex;
+
+    &.primary {
+      color: $tagPrimaryColor;
+    }
+
+    &.secondary {
+      color: $tagSecondaryColor;
+    }
+  }
+}

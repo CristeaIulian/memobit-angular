@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+@import '../../styles/theming';
+
+.mem-input-text {
+  position: relative;
+
+  input[type='text'] {
+    background-color: $inputBgColor;
+    border: 1px solid $inputBorderColor;
+    padding: $s-16;
+    color: $inputColor;
+    width: calc(100% - $s-32 - $s-2);
+    height: $s-16;
+
+    &:hover {
+      background-color: $inputHoverBgColor;
+    }
+
+    &:focus {
+      border: 1px solid $inputFocusBorderColor;
+      background-color: $inputFocusBgColor;
+      outline: none;
+    }
+
+    &::placeholder {
+      font-style: italic;
+      font-size: $fs-14;
+      color: $inputPlaceholderBgColor;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="memobit-modal-backdrop" (click)="onClickBackDrop()"></div>
+<div class="memobit-modal" [class.has-title]="!!title" #modalRef>
+  <div class="memobit-modal-header">
+    <div class="memobit-modal-title">{{title}}</div>
+    <div class="memobit-modal-close" (click)="onClickClose()"><mem-icon class="data-preview-close" icon="close" [size]="16"></mem-icon></div>
+  </div>
+  <div class="memobit-modal-content"><ng-content></ng-content></div>
+</div>

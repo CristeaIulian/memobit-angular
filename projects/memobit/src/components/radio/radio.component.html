@@ -1,0 +1,8 @@
+<div class="mem-radio" [ngClass]="{'isStacked': isStacked}">
+  <span>{{groupLabel ? groupLabel + ': ' : ''}}</span>
+  <ng-container *ngFor="let item of dataSet">
+    <span (click)="onClick(item.value)" tabindex="0" (keyup)="onKeyUp($event, item.value)">
+      <mem-icon [icon]="'radio-button-' + (item.isChecked ? 'checked' : 'unchecked')" [size]="24"></mem-icon> <label>{{item.label}}</label>
+    </span>
+  </ng-container>
+</div>

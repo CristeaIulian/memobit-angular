@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+@import '../../styles/theming';
+
+label.title {
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: $listCategoryBgColor;
+  width: calc(100% - $s-32);
+  display: block;
+  padding: $s-16;
+  color: $listCategoryColor;
+  font-size: $fs-14;
+
+  & + label.title {
+    margin-top: $s-8;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 1px 0;
+
+    a {
+      display: block;
+      padding: $s-12 $s-8 $s-12 $s-24;
+      width: calc(100% - $s-32);
+      color: $listLinkColor;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $listLinkHoverBgColor;
+      }
+
+      &.isSelected {
+        color: $listLinkSelectedColor;
+        background-color: $listLinkSelectedBgColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../variables';
+@import '../theming';
+
+.mem-tooltip {
+  position: absolute;
+  z-index: 1000;
+  color: $tooltipColor;
+  background-color: $tooltipBgColor;
+  padding: $s-2 $s-8;
+  border-radius: $borderRadiusSmall;
+}

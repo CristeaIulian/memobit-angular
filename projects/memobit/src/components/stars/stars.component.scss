@@ -1,0 +1,14 @@
+@import '../../styles/theming';
+
+.stars-container {
+  display: flex;
+
+  .star {
+    display: flex;
+    align-items: center;
+
+    ic-icon {
+      line-height: 13px;
+    }
+  }
+}

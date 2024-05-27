@@ -1,0 +1,10 @@
+<div [className]="'drawer-backdrop ' + (isVisible ? 'drawer-is-visible' : '')" (click)="onClose()"></div>
+<div [className]="'drawer ' + (isVisible ? 'drawer-is-visible' : '')">
+  <ul>
+    <li *ngFor="let item of items">
+      <a (click)="onItemClicked(item.path);" [class.active]="item.path === router.url">
+        <mem-icon *ngIf="item.icon" [icon]="item.icon" [size]="20"></mem-icon>{{item.label}}
+      </a>
+    </li>
+  </ul>
+</div>

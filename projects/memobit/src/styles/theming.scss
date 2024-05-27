@@ -1,0 +1,165 @@
+// generics
+$boxShadow: var(--boxShadow);
+$borderRadius: var(--borderRadius);
+$borderRadiusSmall: var(--borderRadiusSmall);
+$borderRadiusExtraSmall: var(--borderRadiusExtraSmall);
+
+// body
+$bodyColor: var(--bodyColor);
+$bodyBgColor: var(--bodyBgColor);
+$bodyFs: var(--bodyFs);
+
+// links
+$linkColor: var(--linkColor);
+$linkHoverColor: var(--linkHoverColor);
+$linkHoverBgColor: var(--linkHoverBgColor);
+
+// scrollbars
+$scrollbarTrackBgColor: var(--scrollbarTrackBgColor);
+$scrollbarThumbBgColor1: var(--scrollbarThumbBgColor1);
+$scrollbarThumbBgColor2: var(--scrollbarThumbBgColor2);
+$scrollbarThumbHoverBgColor: var(--scrollbarThumbHoverBgColor);
+
+// radio
+$radioIconColor: var(--radioIconColor);
+
+// shadows
+$backdropBgColor: var(--backdropBgColor);
+$textShadowColor: var(--textShadowColor);
+
+// ripple effect
+$rippleBgColor: var(--rippleBgColor);
+
+$actorTileBgColor: var(--actorTileBgColor); // @todo: this should not be here
+
+$buttonActiveBgColor: var(--buttonActiveBgColor);
+$buttonBgColor: var(--buttonBgColor);
+$buttonBorder: var(--buttonBorder);
+$buttonColor: var(--buttonColor);
+$buttonDisabledBgColor: var(--buttonDisabledBgColor);
+$buttonHoverBgColor: var(--buttonHoverBgColor);
+$buttonHoverBorder: var(--buttonHoverBorder);
+$buttonVariantContainedBorderColor: var(--buttonVariantContainedBorderColor);
+$buttonVariantContainedBorderColor: var(--buttonVariantContainedBorderColor);
+
+$cardBgColor: var(--cardBgColor);
+$cardBorderColor: var(--cardBorderColor);
+$cardHeaderColor: var(--cardHeaderColor);
+$cardHeaderFs: var(--cardHeaderFs);
+$cardHeaderTextTransform: var(--cardHeaderTextTransform);
+
+$contextualMenuBgColor: var(--contextualMenuBgColor);
+$contextualMenuBorderColor: var(--contextualMenuBorderColor);
+$contextualMenuButtonHoverBgColor: var(--contextualMenuButtonHoverBgColor);
+
+$dataGridImageBoxShadow: var(--dataGridImageBoxShadow);
+$dataGridImageMiniGradeBgColor: var(--dataGridImageMiniGradeBgColor);
+$dataGridTileBgColor: var(--dataGridTileBgColor);
+$dataGridTileBorderColor: var(--dataGridTileBorderColor);
+
+$dataListColumnBorderBottomColor: var(--dataListColumnBorderBottomColor);
+$dataListRowBgColor: var(--dataListRowBgColor);
+$dataListRowEvenBgColor: var(--dataListRowEvenBgColor);
+$dataListRowHoverBgColor: var(--dataListRowHoverBgColor);
+
+$dataPreviewSectionBgColor: var(--dataPreviewSectionBgColor);
+$dataPreviewSectionBorderColor: var(--dataPreviewSectionBorderColor);
+
+$dataViewNoItemsBgColor: var(--dataViewNoItemsBgColor);
+$dataViewNoItemsColor: var(--dataViewNoItemsColor);
+$dataViewNoItemsHoverBgColor: var(--dataViewNoItemsHoverBgColor);
+
+$delimiterBorderTopColor: var(--delimiterBorderTopColor);
+
+$drawerBgColor: var(--drawerBgColor);
+$drawerBorderColor: var(--drawerBorderColor);
+$drawerListLinkActiveBgColor: var(--drawerListLinkActiveBgColor);
+$drawerListLinkActiveColor: var(--drawerListLinkActiveColor);
+$drawerListLinkActiveFontWeight: var(--drawerListLinkActiveFontWeight);
+$drawerListLinkActiveTextDecoration: var(--drawerListLinkActiveTextDecoration);
+$drawerListLinkHoverBgColor: var(--drawerListLinkHoverBgColor);
+$drawerListLinkHoverColor: var(--drawerListLinkHoverColor);
+
+$formFieldErrorColor: var(--formFieldErrorColor);
+$formFieldHintColor: var(--formFieldHintColor);
+
+$inputBgColor: var(--inputBgColor);
+$inputBorderColor: var(--inputBorderColor);
+$inputColor: var(--inputColor);
+$inputFocusBgColor: var(--inputFocusBgColor);
+$inputFocusBorderColor: var(--inputFocusBorderColor);
+$inputHoverBgColor: var(--inputHoverBgColor);
+$inputPlaceholderBgColor: var(--inputPlaceholderBgColor);
+
+$lightModalBgColor: var(--lightModalBgColor);
+
+$listCategoryBgColor: var(--listCategoryBgColor);
+$listCategoryColor: var(--listCategoryColor);
+$listLinkColor: var(--listLinkColor);
+$listLinkHoverBgColor: var(--listLinkHoverBgColor);
+$listLinkSelectedColor: var(--listLinkSelectedColor);
+$listLinkSelectedBgColor: var(--listLinkSelectedBgColor);
+
+$modalCloseButtonBgColor: var(--modalCloseButtonBgColor);
+$modalCloseButtonBorderColor: var(--modalCloseButtonBorderColor);
+$modalCloseButtonColor: var(--modalCloseButtonColor);
+$modalCloseButtonSize: var(--modalCloseButtonSize);
+$modalContentBgColor: var(--modalContentBgColor);
+$modalHeaderBgColor: var(--modalHeaderBgColor);
+$modalHeaderBorderBottomColor: var(--modalHeaderBorderBottomColor);
+$modalHeaderTitleColor: var(--modalHeaderTitleColor);
+$modalHeaderTitleFs: var(--modalHeaderTitleFs);
+$modalHeaderTitlePadding: var(--modalHeaderTitlePadding);
+$modalHeaderTitleTextTransform: var(--modalHeaderTitleTextTransform);
+
+$pageLoaderIndeterminateBgColor: var(--pageLoaderIndeterminateBgColor);
+$pageLoaderIndeterminateFillBgColor: var(--pageLoaderIndeterminateFillBgColor);
+
+$placeholderBgColor: var(--placeholderBgColor);
+$placeholderAccentColor: var(--placeholderAccentColor);
+
+$progressBarBgColor: var(--progressBarBgColor);
+$progressBarBorder: var(--progressBarBorder);
+$progressBarBorderRadius: var(--progressBarBorderRadius);
+$progressBarFillBgColor: var(--progressBarFillBgColor);
+$progressBarFillHeight: var(--progressBarFillHeight);
+$progressBarHeight: var(--progressBarHeight);
+$progressBarTextAlign: var(--progressBarTextAlign);
+$progressBarTextFs: var(--progressBarTextFs);
+$progressBarTextMarginTop: var(--progressBarTextMarginTop);
+
+$selectActiveBgColor: var(--selectActiveBgColor);
+$selectActiveColor: var(--selectActiveColor);
+$selectBorderColor: var(--selectBorderColor);
+$selectHoverBgColor: var(--selectHoverBgColor);
+$selectFocusBgColor: var(--selectFocusBgColor);
+$selectFocusBorderColor: var(--selectFocusBorderColor);
+$selectItemBgColor: var(--selectItemBgColor);
+$selectOptionsBorderColor: var(--selectOptionsBorderColor);
+
+$sortItemActiveBgColor: var(--sortItemActiveBgColor);
+$sortItemActiveColor: var(--sortItemActiveColor);
+$sortItemHoverBgColor: var(--sortItemHoverBgColor);
+$sortItemHoverColor: var(--sortItemHoverColor);
+
+$tagBgColor: var(--tagBgColor);
+$tagBorderColor: var(--tagBorderColor);
+$tagColor: var(--tagColor);
+$tagHoverBgColor: var(--tagHoverBgColor);
+$tagHoverBorderColor: var(--tagHoverBorderColor);
+$tagHoverColor: var(--tagHoverColor);
+$tagOpacity: var(--tagOpacity);
+$tagPrimaryColor: var(--tagPrimaryColor);
+$tagSecondaryColor: var(--tagSecondaryColor);
+
+$toastStateErrorBgColor: var(--toastStateErrorBgColor);
+$toastStateErrorColor: var(--toastStateErrorColor);
+$toastStateInfoBgColor: var(--toastStateInfoBgColor);
+$toastStateInfoColor: var(--toastStateInfoColor);
+$toastStateSuccessBgColor: var(--toastStateSuccessBgColor);
+$toastStateSuccessColor: var(--toastStateSuccessColor);
+$toastStateWarningBgColor: var(--toastStateWarningBgColor);
+$toastStateWarningColor: var(--toastStateWarningColor);
+
+$tooltipBgColor: var(--tooltipBgColor);
+$tooltipColor: var(--tooltipColor);

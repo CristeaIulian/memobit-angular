@@ -1,0 +1,55 @@
+@import '../variables';
+@import '../theming';
+
+.mem-button {
+  background-color: $buttonBgColor;
+  border: $buttonBorder;
+  border-radius: $s-2;
+  color: $buttonColor;
+  font-weight: 600;
+  transition: background 400ms;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  height: $s-24;
+  column-gap: $s-4;
+
+  &:not(:disabled):hover {
+    background-color: $buttonHoverBgColor;
+    border: $buttonHoverBorder;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    color: $buttonDisabledBgColor;
+  }
+
+  &.mem-button-active {
+    background-color: $buttonActiveBgColor;
+  }
+
+  &.mem-button-variant-text {
+    padding: 10px 20px;
+  }
+
+  &.mem-button-variant-contained {
+    border: 1px solid $buttonVariantContainedBorderColor;
+    padding: $s-16;
+  }
+
+  span.mem-ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: mem-ripple 600ms linear;
+    background-color: $rippleBgColor;
+  }
+
+  @keyframes mem-ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../styles/theming';
+
+.progress-bar-back {
+  position: relative;
+  border: $progressBarBorder;
+  background-color: $progressBarBgColor;
+  width: 100px;
+  height: $progressBarHeight;
+  border-radius: $progressBarBorderRadius;
+
+  .progress-bar {
+    background-color: $progressBarFillBgColor;
+    height: $progressBarFillHeight;
+    position: absolute;
+  }
+
+  .text {
+    position: absolute;
+    width: 100px;
+    text-align: $progressBarTextAlign;
+    margin-top: $progressBarTextMarginTop;
+    font-size: $progressBarTextFs;
+  }
+}

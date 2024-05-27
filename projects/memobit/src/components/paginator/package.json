@@ -1,0 +1,7 @@
+{
+  "license": "MIT",
+  "author": "Iulian Cristea",
+  "name": "mem-paginator",
+  "version": "1.0.0",
+  "main": "./public-api.ts"
+}

@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+@import '../../styles/theming';
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  a,
+  span {
+    font-size: $s-16;
+    text-transform: capitalize;
+    text-decoration: none;
+  }
+
+  a {
+    color: $linkColor;
+
+    &:hover {
+      color: $linkHoverColor;
+      background-color: $linkHoverBgColor;
+    }
+  }
+
+  ic-icon {
+    line-height: 11px;
+  }
+}

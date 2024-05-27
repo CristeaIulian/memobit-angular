@@ -1,0 +1,41 @@
+@import 'theming';
+@import 'variables';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: $s-16;
+  padding: 0 $s-16;
+  height: 100%;
+
+  .logo {
+    font-size: $fs-20;
+    width: 203px;
+
+    a {
+      text-decoration: none;
+
+      span {
+        &:first-child {
+          color: #d9920e;
+        }
+        &:last-child {
+          color: #197ee9;
+        }
+      }
+    }
+  }
+
+  .themeSelectorContainer {
+    width: 160px;
+  }
+}
+
+.playgroundContainer {
+  width: 80%;
+  min-height: 100px;
+  background-color: #022f39;
+  margin: 100px auto 0;
+  border: 1px dashed #394e5a;
+}
