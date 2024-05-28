@@ -1,23 +1,13 @@
-# Memobit
+# Memobit Angular
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
-## Code scaffolding
+## Development server
 
-Run `ng generate component component-name --project memobit` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project memobit`.
-> Note: Don't forget to add `--project memobit` or else it will be added to the default project in your `angular.json` file. 
+Run `ng pack` to build the library.
+As for now, we don't have an npm package (wip), you can use the library by importing it in your project.
 
-## Build
-
-Run `ng build memobit` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build memobit`, go to the dist folder `cd dist/memobit` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test memobit` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm i /path/to/memobit-angular/memobit-angular-0.0.0.tgz`
 
 ## Further help
 
