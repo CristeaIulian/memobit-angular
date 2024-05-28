@@ -8,7 +8,7 @@ export class ButtonDirective implements OnInit, OnChanges {
 
   @Input() memRipple: boolean | undefined = undefined;
 
-  @Input() memVariant: 'text' | 'compact' | 'contained' = 'text';
+  @Input() memVariant: 'text' | 'compact' | 'contained' | 'tab' = 'text';
 
   @Input() memIsActive: boolean = false;
 

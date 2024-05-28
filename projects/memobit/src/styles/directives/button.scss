@@ -38,6 +38,12 @@
     padding: $s-16;
   }
 
+  &.mem-button-variant-tab {
+    border: 1px solid $buttonVariantContainedBorderColor;
+    padding: $s-16;
+    border-radius: 0;
+  }
+
   span.mem-ripple {
     position: absolute;
     border-radius: 50%;

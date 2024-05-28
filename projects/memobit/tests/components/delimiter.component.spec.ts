@@ -1,4 +1,4 @@
-import { DelimiterComponent } from './delimiter.component';
+import { DelimiterComponent } from '../../src/components/delimiter/delimiter.component';
 
 describe('DelimiterComponent', () => {
   let component: DelimiterComponent;

@@ -12,7 +12,6 @@ const memobitModules = [ThemeSelectorModule];
 @NgModule({
   declarations: [AppComponent, PlaygroundComponent],
   imports: [RouterModule.forRoot([]), BrowserModule, memobitModules],
-
   bootstrap: [AppComponent]
 })
 export class AppModule {}
