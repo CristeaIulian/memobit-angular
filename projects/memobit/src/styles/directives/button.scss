@@ -1,5 +1,7 @@
-@import '../variables';
-@import '../theming';
+@import "../variables";
+@import "../theming";
+
+// @Todo: Disable state text is almost invisible
 
 .mem-button {
   background-color: $buttonBgColor;

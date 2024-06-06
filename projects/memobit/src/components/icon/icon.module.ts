@@ -105,6 +105,10 @@ import { MemIconViewGridOutlineComponent } from './icons/view-grid-outline';
 import { MemIconWalletTravelComponent } from './icons/wallet-travel';
 import { MemIconWaterPoloComponent } from './icons/water-polo';
 import { MemIconWavesComponent } from './icons/waves';
+import { MemIconArrowUpComponent } from './icons/arrow-up';
+import { MemIconArrowDownComponent } from './icons/arrow-down';
+import { MemIconCaretUpComponent } from './icons/caret-up';
+import { MemIconCaretDownComponent } from './icons/caret-down';
 
 const memobitIcons = [
   MemIconAccountCowboyHatComponent,
@@ -208,7 +212,11 @@ const memobitIcons = [
   MemIconViewGridOutlineComponent,
   MemIconWalletTravelComponent,
   MemIconWaterPoloComponent,
-  MemIconWavesComponent
+  MemIconWavesComponent,
+  MemIconArrowUpComponent,
+  MemIconArrowDownComponent,
+  MemIconCaretUpComponent,
+  MemIconCaretDownComponent,
 ];
 
 const coreModules = [NgClass, NgIf];
@@ -216,6 +224,6 @@ const coreModules = [NgClass, NgIf];
 @NgModule({
   declarations: [IconComponent, ...memobitIcons],
   exports: [IconComponent],
-  imports: [...coreModules]
+  imports: [...coreModules],
 })
 export class IconModule {}

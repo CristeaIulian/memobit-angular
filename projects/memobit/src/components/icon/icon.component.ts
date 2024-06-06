@@ -5,7 +5,7 @@ import { IconSize, iconsList } from './types';
 @Component({
   selector: 'mem-icon',
   templateUrl: './icon.component.html',
-  styleUrls: ['./icon.component.scss']
+  styleUrls: ['./icon.component.scss'],
 })
 export class IconComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() icon: string = '';

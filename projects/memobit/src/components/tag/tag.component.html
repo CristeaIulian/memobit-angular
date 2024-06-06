@@ -1,6 +1,9 @@
-<div class="tag" [class]="tag.class" *ngIf="tag">
-  <mem-icon *ngIf="tag.icon" [icon]="tag.icon" [size]="16" [class]="tag.iconColorType"></mem-icon>
+<div class="tag" [class]="tag ? tag.class : ''">
+    <ng-container *ngIf="tag">
+        <mem-icon *ngIf="tag.icon" [icon]="tag.icon" [size]="16" [class]="tag.iconColorType"></mem-icon>
+        <span *ngIf="tag.tooltip || tag.label" [class]="tag.labelClass" [memTooltip]="tag.tooltip" memTooltipPosition="right"> {{ tag.label }} </span>
+        <mem-stars *ngIf="tag.type === 'stars' && tag.value" [num]="tag.value" [halfStars]="true" size="small"></mem-stars>
+    </ng-container>
 
-  <span *ngIf="tag.tooltip || tag.label" [class]="tag.labelClass" [memTooltip]="tag.tooltip" memTooltipPosition="right"> {{tag.label}} </span>
-  <mem-stars *ngIf="tag.type==='stars' && tag.value" [num]="tag.value" [halfStars]="true" size="small"></mem-stars>
+    <ng-content></ng-content>
 </div>

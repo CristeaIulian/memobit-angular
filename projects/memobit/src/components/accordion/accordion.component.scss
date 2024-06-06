@@ -1,0 +1,43 @@
+@import "../../styles/theming";
+@import "../../styles/variables";
+
+.accordion {
+  width: 100%;
+
+  .title {
+    padding: $s-16;
+    border: 1px solid #394e5a; // @Todo: add this color to theming
+    border-bottom: 0;
+    background-color: $listCategoryBgColor;
+    position: relative;
+
+    mem-icon {
+      position: absolute;
+      right: $s-16;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      background-color: $listLinkSelectedBgColor;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    padding: 0 $s-16;
+    overflow: hidden;
+    transition: 0.4s;
+    height: 0;
+    line-height: 20px;
+    // @Todo: there should be a background color for the content
+
+    &.is-open {
+      padding: $s-16;
+      //height: 150px;
+      // @Todo: fix the height of the content to use proper animation
+      height: auto;
+      overflow: visible;
+    }
+  }
+}

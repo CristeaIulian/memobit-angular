@@ -17,9 +17,9 @@ type RadioType = RadioItem | string | number;
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: forwardRef((): typeof RadioComponent => RadioComponent)
-    }
-  ]
+      useExisting: forwardRef((): typeof RadioComponent => RadioComponent),
+    },
+  ],
 })
 export class RadioComponent implements ControlValueAccessor, OnInit {
   // @ts-ignore
@@ -29,6 +29,8 @@ export class RadioComponent implements ControlValueAccessor, OnInit {
   @Input() public checkedValue?: number | string;
   @Input() public isChecked: boolean = false;
   @Input() public groupLabel: string = '';
+
+  // @Todo: if label is not specified - use value if available
 
   @Output() checkedItem: EventEmitter<number | string> = new EventEmitter<number | string>();
 
@@ -96,8 +98,8 @@ export class RadioComponent implements ControlValueAccessor, OnInit {
           (record: RadioType): RadioItem => ({
             value: <string>record,
             label: <string>record,
-            ...(record === checkedValue && { isChecked: true })
-          })
+            ...(record === checkedValue && { isChecked: true }),
+          }),
         );
       }
 
@@ -106,8 +108,8 @@ export class RadioComponent implements ControlValueAccessor, OnInit {
           (record: RadioType): RadioItem => ({
             value: Number(record),
             label: <string>record,
-            ...(record === checkedValue && { isChecked: true })
-          })
+            ...(record === checkedValue && { isChecked: true }),
+          }),
         );
       }
 
@@ -117,7 +119,7 @@ export class RadioComponent implements ControlValueAccessor, OnInit {
           return {
             value: (<RadioItem>record).value || (<RadioItem>record).label,
             label: (<RadioItem>record).label,
-            ...((record === checkedValue || (<RadioItem>record).isChecked) && { isChecked: true })
+            ...((record === checkedValue || (<RadioItem>record).isChecked) && { isChecked: true }),
           };
         });
       }

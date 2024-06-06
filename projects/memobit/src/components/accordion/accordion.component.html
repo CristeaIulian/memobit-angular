@@ -1,0 +1,10 @@
+<div class="accordion">
+    <div *ngFor="let item of items">
+        <div class="title" (click)="onItemClick(item)">
+            {{ item.title }}
+            <mem-icon icon="caret-down" *ngIf="!item.isVisible"></mem-icon>
+            <mem-icon icon="caret-up" *ngIf="item.isVisible"></mem-icon>
+        </div>
+        <div class="content" [class.is-open]="item.isVisible" [innerHTML]="item.content | safeHtml"></div>
+    </div>
+</div>

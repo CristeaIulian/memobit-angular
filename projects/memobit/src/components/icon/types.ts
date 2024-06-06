@@ -9,8 +9,10 @@ export const iconsList = [
   'account',
   'airport',
   'android-studio',
+  'caret-down',
   'arrow-left',
   'arrow-right',
+  'caret-up',
   'arrow-up-thick',
   'bank-outline',
   'beach',
@@ -24,7 +26,9 @@ export const iconsList = [
   'calendar-check-outline',
   'calendar-end',
   'car-traction-control',
+  'caret-down',
   'caret-down-outline',
+  'caret-up',
   'castle',
   'chess-rook',
   'chevron-right',
@@ -104,5 +108,5 @@ export const iconsList = [
   'view-grid-outline',
   'wallet-travel',
   'water-polo',
-  'waves'
+  'waves',
 ];
