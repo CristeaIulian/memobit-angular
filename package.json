@@ -1,9 +1,10 @@
 {
-  "name": "memobit-angular",
-  "version": "1.0.0",
+  "name": "@memobit/angular",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4201",
+    "pack": "cd projects/memobit/src && npm pack",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
