@@ -6,7 +6,7 @@ import { ToastPosition, ToastType } from './types';
   selector: 'mem-toast',
   templateUrl: './toast.component.html',
   standalone: true,
-  styleUrls: ['./toast.component.scss']
+  styleUrls: ['./toast.component.scss'],
 })
 export class ToastComponent {
   @Input() message = '';

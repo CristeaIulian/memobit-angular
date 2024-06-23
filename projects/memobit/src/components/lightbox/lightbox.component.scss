@@ -1,0 +1,100 @@
+@import "../../styles/variables";
+@import "../../styles/theming";
+
+.memobit-lightbox-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: $backdropBgColor;
+  opacity: 0.4;
+}
+
+.memobit-lightbox {
+  position: fixed;
+  max-width: calc(100% - 60px);
+  max-height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+
+  .memobit-lightbox-header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: $borderRadius $borderRadius 0 0;
+    align-items: center;
+    background-color: $modalHeaderBgColor;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid $modalHeaderBorderBottomColor;
+
+    .memobit-lightbox-header-left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      column-gap: $s-8;
+      padding: $modalHeaderTitlePadding;
+
+      .lightbox-numbers {
+        display: flex;
+        column-gap: $s-4;
+        color: #838383; // @todo: change to theme
+        font-size: 12px; // @todo: change to theme
+      }
+
+      .memobit-lightbox-title {
+        display: block;
+        font-size: $modalHeaderTitleFs;
+        color: $modalHeaderTitleColor;
+        text-transform: $modalHeaderTitleTextTransform;
+      }
+    }
+
+    .memobit-lightbox-close {
+      right: 22px;
+      line-height: 6px;
+      border: 1px solid $modalCloseButtonBorderColor;
+      border-bottom: 0;
+      background-color: $modalCloseButtonBgColor;
+      color: $modalCloseButtonColor;
+
+      position: static;
+      margin-top: 0;
+      margin-right: $s-16;
+      border-radius: 0;
+      padding: $s-2;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      ::ng-deep ic-icon svg {
+        width: $modalCloseButtonSize;
+        height: $modalCloseButtonSize;
+      }
+    }
+  }
+
+  .memobit-lightbox-content {
+    height: 100%;
+    padding: $s-16;
+    overflow: auto;
+    max-height: calc(100vh - 160px);
+    background-color: $modalContentBgColor;
+    backdrop-filter: blur(10px);
+    border-radius: 0;
+
+    img {
+      width: -webkit-fill-available;
+      height: -webkit-fill-available;
+    }
+  }
+}
+
+:host.no-padding {
+  .memobit-lightbox-content {
+    padding: 0;
+  }
+}

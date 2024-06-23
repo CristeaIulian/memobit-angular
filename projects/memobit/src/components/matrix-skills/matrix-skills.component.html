@@ -1,0 +1,19 @@
+<div class="skills-level">
+    <ul>
+        <li class="header">
+            <label></label>
+            <div>
+                <div *ngFor="let level of levels">{{ level }}</div>
+            </div>
+        </li>
+        <li *ngFor="let item of items">
+            <label>{{ item.label }}</label>
+            <div class="bar-progress">
+                <div class="bar-progress-indicator" style="{{ 'width:' + item.percentage + '%;' }}">
+                    <div class="bar-progress-indicator-inside"></div>
+                    <span>{{ item.percentage }}%</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AccordionItem } from '@memobit/components/accordion/types';
 
 @Component({
   selector: 'app-playground',

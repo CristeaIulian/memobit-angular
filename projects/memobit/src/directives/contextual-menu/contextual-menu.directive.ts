@@ -7,11 +7,18 @@ interface Positions {
   top: number;
 }
 
+// @Todo: should support arborescence - multi level menu - see mat-menu
+
 @Directive({
-  selector: '[memContextualMenu]'
+  selector: '[memContextualMenu]',
 })
 export class ContextualMenuDirective implements OnDestroy {
-  constructor(private elementRef: ElementRef, private viewContainerRef: ViewContainerRef, private router: Router, private renderer: Renderer2) {}
+  constructor(
+    private elementRef: ElementRef,
+    private viewContainerRef: ViewContainerRef,
+    private router: Router,
+    private renderer: Renderer2,
+  ) {}
 
   @Input() memContextualMenuPreferredPosition: 'above' | 'below' | 'left' | 'right' = 'below';
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -46,25 +53,25 @@ export class ContextualMenuDirective implements OnDestroy {
       case 'below':
         positions = {
           left: window.scrollX + boundingRect.left,
-          top: window.scrollY + boundingRect.top + boundingRect.height
+          top: window.scrollY + boundingRect.top + boundingRect.height,
         };
         break;
       case 'above':
         positions = {
           left: window.scrollX + boundingRect.left,
-          top: window.scrollY + boundingRect.top - boundingRect.height
+          top: window.scrollY + boundingRect.top - boundingRect.height,
         };
         break;
       case 'left':
         positions = {
           left: window.scrollX + boundingRect.left - menuWidth,
-          top: window.scrollY + boundingRect.top + boundingRect.height / 2 - menuHeight / 2
+          top: window.scrollY + boundingRect.top + boundingRect.height / 2 - menuHeight / 2,
         };
         break;
       case 'right':
         positions = {
           left: window.scrollX + boundingRect.left + boundingRect.width,
-          top: window.scrollY + boundingRect.top + boundingRect.height / 2 - menuHeight / 2
+          top: window.scrollY + boundingRect.top + boundingRect.height / 2 - menuHeight / 2,
         };
         break;
     }

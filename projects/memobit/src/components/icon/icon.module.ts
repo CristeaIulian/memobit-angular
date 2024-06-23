@@ -27,6 +27,7 @@ import { MemIconCarTractionControlComponent } from './icons/car-traction-control
 import { MemIconCaretDownOutlineComponent } from './icons/caret-down-outline';
 import { MemIconCastleComponent } from './icons/castle';
 import { MemIconChessRookComponent } from './icons/chess-rook';
+import { MemIconChevronLeftComponent } from './icons/chevron-left';
 import { MemIconChevronRightComponent } from './icons/chevron-right';
 import { MemIconChurchComponent } from './icons/church';
 import { MemIconCityComponent } from './icons/city';
@@ -109,6 +110,79 @@ import { MemIconArrowUpComponent } from './icons/arrow-up';
 import { MemIconArrowDownComponent } from './icons/arrow-down';
 import { MemIconCaretUpComponent } from './icons/caret-up';
 import { MemIconCaretDownComponent } from './icons/caret-down';
+import { MemIconCheckboxCheckedComponent } from './icons/checkbox-checked';
+import { MemIconCheckboxUncheckedComponent } from './icons/checkbox-unchecked';
+import { MemIconCheckedComponent } from './icons/checked';
+import { MemIconDriverLicenseComponent } from './icons/driver-license';
+import { MemIconExternalComponent } from './icons/external';
+import { MemIconMailComponent } from './icons/mail';
+import { MemIconMilitaryComponent } from './icons/military';
+import { MemIconPhoneComponent } from './icons/phone';
+import { MemIconWantedComponent } from './icons/wanted';
+import { MemIconTechnologyActionscriptComponent } from './icons/technology/technology-actionscript';
+import { MemIconTechnologyAngularJsComponent } from './icons/technology/technology-angular-js';
+import { MemIconTechnologyAngularMaterialComponent } from './icons/technology/technology-angular-material';
+import { MemIconTechnologyAngularComponent } from './icons/technology/technology-angular';
+import { MemIconTechnologyAspComponent } from './icons/technology/technology-asp';
+import { MemIconTechnologyAwsComponent } from './icons/technology/technology-aws';
+import { MemIconTechnologyBootstrapComponent } from './icons/technology/technology-bootstrap';
+import { MemIconTechnologyBashComponent } from './icons/technology/technology-bash';
+import { MemIconTechnologyCSharpComponent } from './icons/technology/technology-c-sharp';
+import { MemIconTechnologyCouchbaseComponent } from './icons/technology/technology-couchbase';
+import { MemIconTechnologyCssComponent } from './icons/technology/technology-css';
+import { MemIconTechnologyDojoToolkitComponent } from './icons/technology/technology-dojo-toolkit';
+import { MemIconTechnologyDotNetComponent } from './icons/technology/technology-dot-net';
+import { MemIconTechnologyEslintComponent } from './icons/technology/technology-eslint';
+import { MemIconTechnologyFlashComponent } from './icons/technology/technology-flash';
+import { MemIconTechnologyFontAwesomeComponent } from './icons/technology/technology-font-awesome';
+import { MemIconTechnologyGitComponent } from './icons/technology/technology-git';
+import { MemIconTechnologyGruntComponent } from './icons/technology/technology-grunt';
+import { MemIconTechnologyHighchartsComponent } from './icons/technology/technology-highcharts';
+import { MemIconTechnologyHtmlComponent } from './icons/technology/technology-html';
+import { MemIconTechnologyHybrisComponent } from './icons/technology/technology-hybris';
+import { MemIconTechnologyJasmineComponent } from './icons/technology/technology-jasmine';
+import { MemIconTechnologyJavascriptComponent } from './icons/technology/technology-javascript';
+import { MemIconTechnologyJestComponent } from './icons/technology/technology-jest';
+import { MemIconTechnologyJoomlaComponent } from './icons/technology/technology-joomla';
+import { MemIconTechnologyJqueryUiComponent } from './icons/technology/technology-jquery-ui';
+import { MemIconTechnologyJqueryComponent } from './icons/technology/technology-jquery';
+import { MemIconTechnologyKarmaComponent } from './icons/technology/technology-karma';
+import { MemIconTechnologyLaravelComponent } from './icons/technology/technology-laravel';
+import { MemIconTechnologyLeafletComponent } from './icons/technology/technology-leaflet';
+import { MemIconTechnologyLessComponent } from './icons/technology/technology-less';
+import { MemIconTechnologyMaterialDesignComponent } from './icons/technology/technology-material-design';
+import { MemIconTechnologyMysqlComponent } from './icons/technology/technology-mysql';
+import { MemIconTechnologyNextJsComponent } from './icons/technology/technology-next-js';
+import { MemIconTechnologyNodeJsComponent } from './icons/technology/technology-node-js';
+import { MemIconTechnologyOauthComponent } from './icons/technology/technology-oauth';
+import { MemIconTechnologyPearComponent } from './icons/technology/technology-pear';
+import { MemIconTechnologyPhotoshopComponent } from './icons/technology/technology-photoshop';
+import { MemIconTechnologyPhpDocumentorComponent } from './icons/technology/technology-php-documentor';
+import { MemIconTechnologyPhpComponent } from './icons/technology/technology-php';
+import { MemIconTechnologyPostgresqlComponent } from './icons/technology/technology-postgresql';
+import { MemIconTechnologyPreactComponent } from './icons/technology/technology-preact';
+import { MemIconTechnologyPrettierComponent } from './icons/technology/technology-prettier';
+import { MemIconTechnologyReactComponent } from './icons/technology/technology-react';
+import { MemIconTechnologyRedisComponent } from './icons/technology/technology-redis';
+import { MemIconTechnologyReduxComponent } from './icons/technology/technology-redux';
+import { MemIconTechnologyRxjsComponent } from './icons/technology/technology-rxjs';
+import { MemIconTechnologySassComponent } from './icons/technology/technology-sass';
+import { MemIconTechnologyScssComponent } from './icons/technology/technology-scss';
+import { MemIconTechnologySeoComponent } from './icons/technology/technology-seo';
+import { MemIconTechnologySketchComponent } from './icons/technology/technology-sketch';
+import { MemIconTechnologySymfonyComponent } from './icons/technology/technology-symfony';
+import { MemIconTechnologySmartyComponent } from './icons/technology/technology-smarty';
+import { MemIconTechnologyTailwindComponent } from './icons/technology/technology-tailwind';
+import { MemIconTechnologyTortoiseSvnComponent } from './icons/technology/technology-tortoise-svn';
+import { MemIconTechnologyTypescriptComponent } from './icons/technology/technology-typescript';
+import { MemIconTechnologyVisualBasicComponent } from './icons/technology/technology-visual-basic';
+import { MemIconTechnologyWebComponentsComponent } from './icons/technology/technology-web-components';
+import { MemIconTechnologyWordpressComponent } from './icons/technology/technology-wordpress';
+import { MemIconTechnologyWebpackComponent } from './icons/technology/technology-webpack';
+import { MemIconTechnologyXhrComponent } from './icons/technology/technology-xhr';
+import { MemIconTechnologyXmlComponent } from './icons/technology/technology-xml';
+import { MemIconTechnologyYuiComponent } from './icons/technology/technology-yui';
+import { MemIconTechnologyZendFrameworkComponent } from './icons/technology/technology-zend-framework';
 
 const memobitIcons = [
   MemIconAccountCowboyHatComponent,
@@ -135,7 +209,9 @@ const memobitIcons = [
   MemIconCaretDownOutlineComponent,
   MemIconCastleComponent,
   MemIconChessRookComponent,
+  MemIconCheckedComponent,
   MemIconChevronRightComponent,
+  MemIconChevronLeftComponent,
   MemIconChurchComponent,
   MemIconCityVariantOutlineComponent,
   MemIconCityComponent,
@@ -191,6 +267,8 @@ const memobitIcons = [
   MemIconProgressUploadComponent,
   MemIconRadioButtonCheckedComponent,
   MemIconRadioButtonUncheckedComponent,
+  MemIconCheckboxCheckedComponent,
+  MemIconCheckboxUncheckedComponent,
   MemIconRunFastComponent,
   MemIconShakerOutlineComponent,
   MemIconShakerComponent,
@@ -217,6 +295,77 @@ const memobitIcons = [
   MemIconArrowDownComponent,
   MemIconCaretUpComponent,
   MemIconCaretDownComponent,
+  MemIconDriverLicenseComponent,
+  MemIconExternalComponent,
+  MemIconMailComponent,
+  MemIconMilitaryComponent,
+  MemIconPhoneComponent,
+  MemIconWantedComponent,
+
+  MemIconTechnologyActionscriptComponent,
+  MemIconTechnologyAngularJsComponent,
+  MemIconTechnologyAngularMaterialComponent,
+  MemIconTechnologyAngularComponent,
+  MemIconTechnologyAspComponent,
+  MemIconTechnologyAwsComponent,
+  MemIconTechnologyBashComponent,
+  MemIconTechnologyBootstrapComponent,
+  MemIconTechnologyCSharpComponent,
+  MemIconTechnologyCouchbaseComponent,
+  MemIconTechnologyCssComponent,
+  MemIconTechnologyDojoToolkitComponent,
+  MemIconTechnologyDotNetComponent,
+  MemIconTechnologyEslintComponent,
+  MemIconTechnologyFlashComponent,
+  MemIconTechnologyFontAwesomeComponent,
+  MemIconTechnologyGitComponent,
+  MemIconTechnologyGruntComponent,
+  MemIconTechnologyHighchartsComponent,
+  MemIconTechnologyHtmlComponent,
+  MemIconTechnologyHybrisComponent,
+  MemIconTechnologyJasmineComponent,
+  MemIconTechnologyJavascriptComponent,
+  MemIconTechnologyJestComponent,
+  MemIconTechnologyJoomlaComponent,
+  MemIconTechnologyJqueryUiComponent,
+  MemIconTechnologyJqueryComponent,
+  MemIconTechnologyKarmaComponent,
+  MemIconTechnologyLaravelComponent,
+  MemIconTechnologyLeafletComponent,
+  MemIconTechnologyLessComponent,
+  MemIconTechnologyMaterialDesignComponent,
+  MemIconTechnologyMysqlComponent,
+  MemIconTechnologyNextJsComponent,
+  MemIconTechnologyNodeJsComponent,
+  MemIconTechnologyOauthComponent,
+  MemIconTechnologyPearComponent,
+  MemIconTechnologyPhotoshopComponent,
+  MemIconTechnologyPhpDocumentorComponent,
+  MemIconTechnologyPhpComponent,
+  MemIconTechnologyPostgresqlComponent,
+  MemIconTechnologyPreactComponent,
+  MemIconTechnologyPrettierComponent,
+  MemIconTechnologyReactComponent,
+  MemIconTechnologyRedisComponent,
+  MemIconTechnologyReduxComponent,
+  MemIconTechnologyRxjsComponent,
+  MemIconTechnologySassComponent,
+  MemIconTechnologyScssComponent,
+  MemIconTechnologySeoComponent,
+  MemIconTechnologySketchComponent,
+  MemIconTechnologySmartyComponent,
+  MemIconTechnologySymfonyComponent,
+  MemIconTechnologyTailwindComponent,
+  MemIconTechnologyTortoiseSvnComponent,
+  MemIconTechnologyTypescriptComponent,
+  MemIconTechnologyVisualBasicComponent,
+  MemIconTechnologyWebComponentsComponent,
+  MemIconTechnologyWebpackComponent,
+  MemIconTechnologyWordpressComponent,
+  MemIconTechnologyXhrComponent,
+  MemIconTechnologyXmlComponent,
+  MemIconTechnologyYuiComponent,
+  MemIconTechnologyZendFrameworkComponent,
 ];
 
 const coreModules = [NgClass, NgIf];

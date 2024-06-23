@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 
 import { ModalComponent } from './modal.component';
-import { IconModule } from '../icon/icon.module';
+import { IconModule } from '../icon';
 @NgModule({
   declarations: [ModalComponent],
   exports: [ModalComponent],
-  imports: [IconModule]
+  imports: [IconModule],
 })
 export class ModalModule {}

@@ -6,14 +6,15 @@ import { AppComponent } from './app/app.component';
 
 import { ThemeSelectorModule } from '@memobit/components/theme-selector';
 import { PlaygroundComponent } from './playground/playground.component';
-import { AccordionModule } from '@memobit/components/accordion';
-import { SafeHtmlModule } from '@memobit/pipes/safehtml';
+import { MatrixSkillsModule } from '@memobit/components/matrix-skills';
+import { LightboxModule } from '@memobit/components/lightbox';
+import { IconModule } from '@memobit/components/icon';
 
 const memobitModules = [ThemeSelectorModule];
 
 @NgModule({
   declarations: [AppComponent, PlaygroundComponent],
-  imports: [RouterModule.forRoot([]), BrowserModule, memobitModules, AccordionModule, SafeHtmlModule],
+  imports: [RouterModule.forRoot([]), BrowserModule, memobitModules, MatrixSkillsModule, LightboxModule, IconModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

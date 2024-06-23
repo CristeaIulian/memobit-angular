@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { DataSet, SelectedOption } from './types';
@@ -11,11 +11,11 @@ import { DataSet, SelectedOption } from './types';
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: forwardRef((): typeof SelectComponent => SelectComponent)
-    }
-  ]
+      useExisting: forwardRef((): typeof SelectComponent => SelectComponent),
+    },
+  ],
 })
-export class SelectComponent implements ControlValueAccessor, OnInit {
+export class SelectComponent implements ControlValueAccessor, OnChanges {
   @Input() public multiple: boolean = false;
   @Input() public hasFilter?: boolean;
   @Input() public items: (DataSet | string | number)[] = [];
@@ -36,7 +36,7 @@ export class SelectComponent implements ControlValueAccessor, OnInit {
 
   constructor(private elementRef: ElementRef) {}
 
-  public ngOnInit(): void {
+  public ngOnChanges(): void {
     if (!this.formControlName) {
       this.setDataForNonFormSelect();
     }
@@ -103,9 +103,7 @@ export class SelectComponent implements ControlValueAccessor, OnInit {
     this.selectItems.emit(el.id);
   }
 
-  public onItemsSelected(el: DataSet, $event: MouseEvent): void {
-    const isChecked = (<HTMLInputElement>$event.target).checked;
-
+  public onItemsSelected(el: DataSet, isChecked: boolean): void {
     if (isChecked) {
       this.selectedItems.push(el);
     } else {
@@ -187,7 +185,7 @@ export class SelectComponent implements ControlValueAccessor, OnInit {
         return {
           id: item,
           label: String(item),
-          isSelected
+          isSelected,
         };
       } else {
         const isSelected =
@@ -201,7 +199,7 @@ export class SelectComponent implements ControlValueAccessor, OnInit {
           id: item.id,
           label: item.label,
           ...(isSelectedOption && { isSelected: isSelectedOption }),
-          ...(item.tag && { tag: item.tag })
+          ...(item.tag && { tag: item.tag }),
         };
       }
     });
@@ -256,7 +254,7 @@ export class SelectComponent implements ControlValueAccessor, OnInit {
 
       return {
         ...item,
-        ...(isSelected && { isSelected: true })
+        ...(isSelected && { isSelected: true }),
       };
     });
 

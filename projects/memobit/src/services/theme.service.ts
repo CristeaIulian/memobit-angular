@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemingService {
-  public setTheme(assetsPath?: string): void {
-    const theme = this.getTheme();
+  public setTheme(assetsPath?: string, theme?: string): void {
+    const savedTheme = theme || this.getTheme();
 
     const themeLink = document.createElement('link');
     themeLink.rel = 'stylesheet';
     themeLink.type = 'text/css';
-    themeLink.href = `${assetsPath ? assetsPath : ''}/memobit/themes/${theme}.css`;
+    themeLink.href = `${assetsPath ? assetsPath : ''}/memobit/themes/${savedTheme}.css`;
 
     const head = document.getElementsByTagName('head');
     head[0].appendChild(themeLink);

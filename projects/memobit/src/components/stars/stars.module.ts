@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
+import { NgForOf } from '@angular/common';
+
+import { IconModule } from '../icon';
+import { TimesModule } from '../../pipes/times';
 
 import { StarsComponent } from './stars.component';
-import { IconModule } from '../icon/icon.module';
-import { TimesModule } from '../../pipes/times/times.module';
-import { NgForOf } from '@angular/common';
 
 const coreModules = [NgForOf];
 
 @NgModule({
   declarations: [StarsComponent],
   exports: [StarsComponent],
-  imports: [...coreModules, IconModule, TimesModule]
+  imports: [...coreModules, IconModule, TimesModule],
 })
 export class StarsModule {}

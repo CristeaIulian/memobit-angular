@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/theming';
+@import "../../styles/variables";
+@import "../../styles/theming";
 
 .mem-select {
   position: relative;
@@ -46,7 +46,7 @@
   .mem-select-dropdown {
     position: absolute;
     z-index: 100;
-    width: 100%;
+    min-width: 100%;
     box-shadow: $boxShadow;
     border: 1px solid $selectOptionsBorderColor;
     box-sizing: border-box;
@@ -72,7 +72,7 @@
         display: flex;
         align-items: center;
 
-        input[type='checkbox'] {
+        input[type="checkbox"] {
           margin: $s-8;
         }
 

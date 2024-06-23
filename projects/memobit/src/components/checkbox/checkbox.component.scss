@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+@import "../../styles/theming";
+
+.mem-checkbox {
+  display: flex;
+  gap: $s-8 $s-8;
+
+  span {
+    display: flex;
+    align-items: center;
+    column-gap: $s-4;
+
+    ic-icon {
+      color: $checkboxIconColor;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  &.isStacked {
+    flex-direction: column;
+  }
+}

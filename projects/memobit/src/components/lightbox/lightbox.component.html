@@ -1,0 +1,23 @@
+<div class="memobit-lightbox-backdrop" (click)="onClickBackDrop()"></div>
+<div class="memobit-lightbox" #modalRef>
+    <div class="memobit-lightbox-header">
+        <div class="memobit-lightbox-header-left">
+            <button memButton memVariant="compact" [disabled]="currentPosition === 0" (click)="onClickPrevious()">
+                <mem-icon icon="chevron-left" [size]="32"></mem-icon>
+            </button>
+            <button memButton memVariant="compact" [disabled]="currentPosition === items.length - 1" (click)="onClickNext()">
+                <mem-icon icon="chevron-right" [size]="32"></mem-icon>
+            </button>
+            <span *ngIf="showNumbers" class="lightbox-numbers">
+                <span>{{ currentPosition + 1 }}</span>
+                <span>of</span>
+                <span>{{ items.length }}</span>
+            </span>
+            <span class="memobit-lightbox-title">
+                {{ lightboxTitle }}
+            </span>
+        </div>
+        <div class="memobit-lightbox-close" (click)="onClickClose()"><mem-icon class="data-preview-close" icon="close" [size]="16"></mem-icon></div>
+    </div>
+    <div class="memobit-lightbox-content"><img [src]="selectedItem?.imageSrc" [alt]="lightboxTitle" /></div>
+</div>

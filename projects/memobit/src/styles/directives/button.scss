@@ -9,6 +9,7 @@
   border-radius: $s-2;
   color: $buttonColor;
   font-weight: 600;
+  font-size: $fs-14;
   transition: background 400ms;
   position: relative;
   overflow: hidden;
@@ -16,6 +17,7 @@
   align-items: center;
   height: $s-24;
   column-gap: $s-4;
+  text-decoration: none;
 
   &:not(:disabled):hover {
     background-color: $buttonHoverBgColor;
@@ -44,6 +46,7 @@
     border: 1px solid $buttonVariantContainedBorderColor;
     padding: $s-16;
     border-radius: 0;
+    height: auto;
   }
 
   span.mem-ripple {

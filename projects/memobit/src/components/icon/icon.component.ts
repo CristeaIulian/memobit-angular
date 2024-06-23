@@ -10,7 +10,7 @@ import { IconSize, iconsList } from './types';
 export class IconComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() icon: string = '';
   @Input() size: IconSize = 20;
-  @Input() color: string = '#ffffff';
+  @Input() color?: string;
 
   constructor(private svgIconContainer: ElementRef) {}
 
@@ -31,6 +31,10 @@ export class IconComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   private setIconColors(): void {
+    if (!this.color) {
+      return;
+    }
+
     // apply fill color on svg tag
     const svgElement = this.svgIconContainer.nativeElement.querySelector('svg');
 
@@ -50,7 +54,7 @@ export class IconComponent implements OnInit, OnChanges, AfterViewInit {
       const pathSvgFillColor = pathSvgElement.getAttribute('fill');
 
       if (pathSvgFillColor !== null && pathSvgFillColor !== 'none') {
-        pathSvgElement.style.fill = this.color;
+        pathSvgElement.style.fill = this.color || '';
       }
     });
   }
