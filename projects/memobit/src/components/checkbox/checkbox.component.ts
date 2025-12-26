@@ -86,7 +86,7 @@ export class CheckboxComponent implements ControlValueAccessor, OnInit {
 
     this.onChange(checkedItems);
     this.checkedItems.emit(checkedItems);
-    console.log('checkedItem', checkedItem);
+
     this.isSelectedChecked.emit(isSelectedChecked);
   }
 
@@ -105,7 +105,7 @@ export class CheckboxComponent implements ControlValueAccessor, OnInit {
           (record: CheckboxType): CheckboxItem => ({
             value: <string>record,
             label: <string>record,
-            ...(checkedValues.includes(record as string | number) && { isChecked: true }),
+            ...(checkedValues?.includes(record as string | number) && { isChecked: true }),
           }),
         );
       }
@@ -115,7 +115,7 @@ export class CheckboxComponent implements ControlValueAccessor, OnInit {
           (record: CheckboxType): CheckboxItem => ({
             value: Number(record),
             label: <string>record,
-            ...(checkedValues.includes(record as string | number) && { isChecked: true }),
+            ...(checkedValues?.includes(record as string | number) && { isChecked: true }),
           }),
         );
       }
@@ -126,7 +126,7 @@ export class CheckboxComponent implements ControlValueAccessor, OnInit {
           return {
             value: (<CheckboxItem>record).value || (<CheckboxItem>record).label,
             label: (<CheckboxItem>record).label,
-            ...((checkedValues.includes(record as string | number) || (<CheckboxItem>record).isChecked) && { isChecked: true }),
+            ...((checkedValues?.includes(record as string | number) || (<CheckboxItem>record).isChecked) && { isChecked: true }),
           };
         });
       }

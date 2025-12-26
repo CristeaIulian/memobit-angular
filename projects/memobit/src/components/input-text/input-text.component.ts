@@ -1,6 +1,11 @@
 import { Component, EventEmitter, forwardRef, Input, OnChanges, Output } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
+export interface InputTextUpdateEvent {
+  value: string;
+  $event: KeyboardEvent;
+}
+
 @Component({
   selector: 'mem-input-text',
   templateUrl: './input-text.component.html',
@@ -17,7 +22,7 @@ export class InputTextComponent implements ControlValueAccessor, OnChanges {
   @Input() public formControlName: string = '';
   @Input() public placeholder?: string = '';
   @Input() public value?: string = '';
-  @Output() inputText: EventEmitter<string> = new EventEmitter<string>();
+  @Output() inputText: EventEmitter<InputTextUpdateEvent> = new EventEmitter<InputTextUpdateEvent>();
 
   public currentValue: string | undefined = '';
 
@@ -47,10 +52,10 @@ export class InputTextComponent implements ControlValueAccessor, OnChanges {
     this.setDataSet(value);
   }
 
-  public onInputChange($event: Event): void {
+  public onInputChange($event: KeyboardEvent): void {
     const newValue = (<HTMLInputElement>$event.target).value;
     this.onChange(newValue);
-    this.inputText.emit(newValue);
+    this.inputText.emit({ value: newValue, $event });
   }
 
   private setDataForNonFormSelect(): void {

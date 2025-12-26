@@ -19,8 +19,7 @@
                 <ng-container *ngFor="let item of dataSetFiltered">
                     <div class="mem-select-item" [ngClass]="{ active: item.isSelected }">
                         <mem-checkbox
-                            [items]="[item.id]"
-                            [checkedValues]="item.isSelected ? [item.id] : []"
+                            [items]="[{ value: item.id, label: item.label, isChecked: item.isSelected }]"
                             (isSelectedChecked)="onItemsSelected(item, $event)"
                         ></mem-checkbox>
                     </div>
@@ -28,6 +27,9 @@
             </ng-container>
             <div *ngIf="!dataSetFiltered.length && !dataSet.length">There are no results</div>
             <div *ngIf="!dataSetFiltered.length && dataSet.length">There are no results, try changing filters</div>
+            <div *ngIf="!dataSetFiltered.length && allowAddNew">
+              <mem-input-text placeholder="Write a new item" (inputText)="onAddNewItem($event)"></mem-input-text>
+            </div>
         </div>
     </div>
     <mem-icon class="mem-select-down-arrow" icon="caret-down-outline" [size]="24"></mem-icon>

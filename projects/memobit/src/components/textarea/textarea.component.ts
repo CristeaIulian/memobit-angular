@@ -9,14 +9,15 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: forwardRef((): typeof TextareaComponent => TextareaComponent)
-    }
-  ]
+      useExisting: forwardRef((): typeof TextareaComponent => TextareaComponent),
+    },
+  ],
 })
 export class TextareaComponent implements ControlValueAccessor, OnChanges {
   @Input() public formControlName: string = '';
   @Input() public placeholder?: string = '';
   @Input() public value?: string;
+  @Input() public rows?: number = 4;
   @Output() inputTextarea: EventEmitter<string> = new EventEmitter<string>();
 
   public currentValue: string | undefined = '';

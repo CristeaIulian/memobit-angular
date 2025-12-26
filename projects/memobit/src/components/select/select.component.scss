@@ -95,6 +95,18 @@
           color: $selectActiveColor;
           background-color: $selectActiveBgColor;
         }
+
+        ::ng-deep mem-input-text {
+          width: 100%;
+        }
+      }
+
+      .mem-select-item ::ng-deep mem-checkbox {
+        width: 100%;
+
+        .mem-checkbox-container {
+          flex: 1;
+        }
       }
     }
   }

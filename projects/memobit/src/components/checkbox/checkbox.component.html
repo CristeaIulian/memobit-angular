@@ -1,7 +1,7 @@
 <div class="mem-checkbox" [ngClass]="{ isStacked: isStacked }">
     <span>{{ groupLabel ? groupLabel + ": " : "" }}</span>
     <ng-container *ngFor="let item of dataSet">
-        <span (click)="onClick(item.value)" tabindex="0" (keyup)="onKeyUp($event, item.value)">
+        <span class="mem-checkbox-container" (click)="onClick(item.value)" tabindex="0" (keyup)="onKeyUp($event, item.value)">
             <mem-icon [icon]="'checkbox-' + (item.isChecked ? 'checked' : 'unchecked')" [size]="24"></mem-icon> <label>{{ item.label }}</label>
         </span>
     </ng-container>

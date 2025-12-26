@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnChanges, Output } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { DataSet, SelectedOption } from './types';
+import { InputTextUpdateEvent } from '@memobit/components/input-text/input-text.component';
 
 @Component({
   selector: 'mem-select',
@@ -24,7 +25,9 @@ export class SelectComponent implements ControlValueAccessor, OnChanges {
   @Input() public selected?: SelectedOption;
   // @Todo: check if selected is done via selected and items.isSelected at the same time and throw an error
   @Input() public variant?: 'normal' | 'compact' = 'normal';
+  @Input() public allowAddNew?: boolean = false;
   @Output() selectItems: EventEmitter<SelectedOption> = new EventEmitter<SelectedOption>();
+  @Output() addNewItem: EventEmitter<string> = new EventEmitter<string>();
 
   public selectedItems: DataSet[] = [];
   public selectedValue = '';
@@ -62,27 +65,16 @@ export class SelectComponent implements ControlValueAccessor, OnChanges {
     this.setDataSet(selected);
   }
 
-  @HostListener('document:click', ['$event']) onMouseClick(event: Event): void {
+  @HostListener('click', ['$event']) clickInside($event: MouseEvent) {
+    $event.stopPropagation();
+  }
+
+  @HostListener('document:click') clickOutside() {
     if (!this.isListVisible) {
       return;
     }
 
-    const label = this.elementRef.nativeElement.querySelector('.mem-select-label');
-    const dropdown = this.elementRef.nativeElement.querySelector('.mem-select-dropdown');
-    const dropdownItems = this.elementRef.nativeElement.querySelectorAll('.mem-select-item');
-
-    let isClickedAnyOfList = false;
-
-    Array.from(dropdownItems).forEach((item): void => {
-      if ((<HTMLElement>item).contains(<HTMLElement>event.target)) {
-        isClickedAnyOfList = true;
-      }
-    });
-    const isCheckbox = (<HTMLInputElement>event.target).type;
-
-    if (dropdown && !dropdown.contains(event.target) && !label.contains(event.target) && !isClickedAnyOfList && !isCheckbox) {
-      this.isListVisible = false;
-    }
+    this.isListVisible = false;
   }
 
   public onLabelClick(): void {
@@ -124,14 +116,22 @@ export class SelectComponent implements ControlValueAccessor, OnChanges {
     this.selectItems.emit(selectedIds);
   }
 
-  public onFilterList(filterText: string): void {
-    this.filterText = filterText;
-    this.dataSetFiltered = this.dataSet.filter((item): boolean => item.label.toLowerCase().includes(filterText.toLowerCase()));
+  public onFilterList({ value }: InputTextUpdateEvent): void {
+    this.filterText = value;
+    this.dataSetFiltered = this.dataSet.filter((item): boolean => String(item.label).toLowerCase().includes(value.toLowerCase()));
   }
 
   public onKeyUp($event: KeyboardEvent): void {
     if ($event.key === 'ArrowDown' || $event.key === 'ArrowUp' || $event.key === 'Enter') {
       this.openDropdown();
+    }
+  }
+
+  public onAddNewItem({ value, $event }: InputTextUpdateEvent): void {
+    if ($event.key === 'Enter') {
+      this.addNewItem.emit(value);
+      this.isListVisible = false;
+      this.selectedValue;
     }
   }
 
