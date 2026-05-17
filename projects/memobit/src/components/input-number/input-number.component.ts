@@ -2,6 +2,7 @@ import { Component, EventEmitter, forwardRef, Input, OnChanges, Output } from '@
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
+  standalone: false,
   selector: 'mem-input-number',
   templateUrl: './input-number.component.html',
   styleUrls: ['input-number.component.scss'],
@@ -9,9 +10,9 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: forwardRef((): typeof InputNumberComponent => InputNumberComponent)
-    }
-  ]
+      useExisting: forwardRef((): typeof InputNumberComponent => InputNumberComponent),
+    },
+  ],
 })
 export class InputNumberComponent implements ControlValueAccessor, OnChanges {
   @Input() public formControlName: string = '';

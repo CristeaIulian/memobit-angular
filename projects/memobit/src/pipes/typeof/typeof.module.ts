@@ -4,6 +4,6 @@ import { TypeOfPipe } from './typeof.pipe';
 
 @NgModule({
   declarations: [TypeOfPipe],
-  exports: [TypeOfPipe]
+  exports: [TypeOfPipe],
 })
 export class TypeOfModule {}

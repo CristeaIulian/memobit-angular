@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
 
   selector: 'mem-icon-chevron-right',
   templateUrl: './chevron-right.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class MemIconChevronRightComponent {}

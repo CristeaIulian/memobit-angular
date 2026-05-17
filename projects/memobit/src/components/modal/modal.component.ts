@@ -1,9 +1,10 @@
 import { Component, ElementRef, EventEmitter, HostListener, Input, Output, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+  styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements AfterViewInit {
   @Input() title: string | null = null;

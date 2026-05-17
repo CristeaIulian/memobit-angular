@@ -1,5 +1,5 @@
-@import 'theming';
-@import 'variables';
+@use "theming" as *;
+@use "variables" as *;
 
 .header {
   display: flex;

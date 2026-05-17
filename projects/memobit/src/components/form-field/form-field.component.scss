@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/theming';
+@use "../../styles/variables" as *;
+@use "../../styles/theming" as *;
 
 .mem-form-field {
   position: relative;
@@ -46,8 +46,8 @@
     ::ng-deep .mem-form-field {
       > mem-input-text,
       > mem-input-number {
-        input[type='text'],
-        input[type='number'] {
+        input[type="text"],
+        input[type="number"] {
           padding-left: 50px !important;
           width: calc(100% - 32px - 2px - 35px);
         }

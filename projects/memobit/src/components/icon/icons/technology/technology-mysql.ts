@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-icon-technology-mysql',
 
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="35.21" height="24" viewBox="0 0 512 349">

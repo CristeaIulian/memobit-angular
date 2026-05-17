@@ -10,6 +10,7 @@ interface Positions {
 // @Todo: should support arborescence - multi level menu - see mat-menu
 
 @Directive({
+  standalone: false,
   selector: '[memContextualMenu]',
 })
 export class ContextualMenuDirective implements OnDestroy {

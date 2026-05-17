@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-icon-technology-tailwind',
 
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="39.9" height="24" viewBox="0 0 256 154">

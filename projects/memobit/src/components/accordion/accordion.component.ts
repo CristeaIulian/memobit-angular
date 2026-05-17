@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { AccordionItem } from './types';
 
 @Component({
+  standalone: false,
   selector: 'mem-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss'],

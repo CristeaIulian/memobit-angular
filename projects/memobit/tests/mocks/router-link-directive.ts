@@ -1,10 +1,10 @@
 // RouterLink stub used to handle [routerLink] directive
-import {Directive, HostListener, Input} from "@angular/core";
+import { Directive, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[routerLink]',
   standalone: true,
-  host: { '(click)': 'onClick()' }
+  host: { '(click)': 'onClick()' },
 })
 export class RouterLinkDirectiveStub {
   @Input('routerLink') linkParams: any;

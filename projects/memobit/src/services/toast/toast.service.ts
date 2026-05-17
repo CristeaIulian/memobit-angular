@@ -4,11 +4,15 @@ import { ToastComponent } from './toast.component';
 import { ToastOptions, ToastPosition, ToastType } from './types';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ToastService {
   private defaultTimeout = 2500;
-  constructor(private componentFactoryResolver: ComponentFactoryResolver, private appRef: ApplicationRef, private injector: Injector) {}
+  constructor(
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private appRef: ApplicationRef,
+    private injector: Injector,
+  ) {}
 
   public show(options: ToastOptions): void {
     // 1. Create a component reference from the component

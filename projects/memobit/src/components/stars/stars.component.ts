@@ -2,9 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IconSize } from '../icon/types';
 
 @Component({
+  standalone: false,
   selector: 'mem-stars',
   templateUrl: './stars.component.html',
-  styleUrls: ['./stars.component.scss']
+  styleUrls: ['./stars.component.scss'],
 })
 export class StarsComponent implements OnInit {
   @Input()

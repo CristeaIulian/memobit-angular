@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
 
   selector: 'mem-icon-flag-checkered',
   templateUrl: './flag-checkered.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class MemIconFlagCheckeredComponent {}

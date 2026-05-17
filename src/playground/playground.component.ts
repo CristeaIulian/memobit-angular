@@ -3,6 +3,7 @@ import { SelectedOption } from '@memobit/components/select/types';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
+  standalone: false,
   selector: 'app-playground',
   templateUrl: './playground.component.html',
   styleUrl: './playground.component.scss',

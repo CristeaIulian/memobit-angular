@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-progress-bar',
   templateUrl: './progress-bar.component.html',
 
-  styleUrls: ['./progress-bar.component.scss']
+  styleUrls: ['./progress-bar.component.scss'],
 })
 export class ProgressBarComponent implements OnInit {
   @Input() value: number = 0;

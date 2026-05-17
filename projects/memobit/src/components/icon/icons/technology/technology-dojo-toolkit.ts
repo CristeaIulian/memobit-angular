@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-icon-technology-dojo-toolkit',
 
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="51.42" height="24" viewBox="0 0 512 239">

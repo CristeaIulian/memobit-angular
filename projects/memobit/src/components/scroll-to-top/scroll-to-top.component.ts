@@ -1,9 +1,10 @@
 import { Component, HostListener } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-scroll-to-top',
   templateUrl: './scroll-to-top.component.html',
-  styleUrls: ['scroll-to-top.component.scss']
+  styleUrls: ['scroll-to-top.component.scss'],
 })
 export class ScrollToTopComponent {
   public isScrollVisible: boolean = false;
@@ -20,7 +21,7 @@ export class ScrollToTopComponent {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   }
 }

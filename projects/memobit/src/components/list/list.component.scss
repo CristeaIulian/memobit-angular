@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import "../../styles/theming";
+@use "../../styles/variables" as *;
+@use "../../styles/theming" as *;
 
 .main {
   background-color: $bodyBgColor;

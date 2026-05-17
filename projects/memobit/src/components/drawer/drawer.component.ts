@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { DrawerItems } from './types';
 
 @Component({
+  standalone: false,
   selector: 'mem-drawer',
   templateUrl: './drawer.component.html',
-  styleUrls: ['./drawer.component.scss']
+  styleUrls: ['./drawer.component.scss'],
 })
 export class DrawerComponent {
   @Input() public isVisible = false;

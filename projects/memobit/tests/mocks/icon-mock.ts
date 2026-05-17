@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'mem-icon',
   standalone: true,
-  template: ''
+  template: '',
 })
 export class MockMemIconComponent {
   @Input() icon: any;

@@ -1,4 +1,4 @@
-@import '../../styles/theming';
+@use "../../styles/theming" as *;
 
 @mixin generate-icon-sizes($size) {
   &.size-#{$size} {

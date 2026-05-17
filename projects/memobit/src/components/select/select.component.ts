@@ -5,6 +5,7 @@ import { DataSet, SelectedOption } from './types';
 import { InputTextUpdateEvent } from '@memobit/components/input-text/input-text.component';
 
 @Component({
+  standalone: false,
   selector: 'mem-select',
   templateUrl: './select.component.html',
   styleUrls: ['select.component.scss'],

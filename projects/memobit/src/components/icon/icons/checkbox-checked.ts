@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-icon-checkbox-checked',
   templateUrl: './checkbox-checked.html',
   styleUrls: [],

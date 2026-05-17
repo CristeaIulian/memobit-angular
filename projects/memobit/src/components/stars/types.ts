@@ -1,5 +1,5 @@
 export enum StarSize {
   Small = 'small',
   Normal = 'normal',
-  Large = 'large'
+  Large = 'large',
 }

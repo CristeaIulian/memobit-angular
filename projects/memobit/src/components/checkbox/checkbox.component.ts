@@ -10,6 +10,7 @@ interface CheckboxItem {
 type CheckboxType = CheckboxItem | string | number;
 
 @Component({
+  standalone: false,
   selector: 'mem-checkbox',
   templateUrl: './checkbox.component.html',
   styleUrls: ['checkbox.component.scss'],

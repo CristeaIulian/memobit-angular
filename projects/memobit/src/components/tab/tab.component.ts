@@ -2,8 +2,9 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
 import { Tab } from './types';
 
 @Component({
+  standalone: false,
   selector: 'mem-tab',
-  templateUrl: './tab.component.html'
+  templateUrl: './tab.component.html',
 })
 export class TabComponent implements OnChanges {
   @Input() public items: Tab[] = [];

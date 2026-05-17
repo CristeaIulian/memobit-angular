@@ -10,6 +10,7 @@ interface RadioItem {
 type RadioType = RadioItem | string | number;
 
 @Component({
+  standalone: false,
   selector: 'mem-radio',
   templateUrl: './radio.component.html',
   styleUrls: ['radio.component.scss'],

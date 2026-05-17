@@ -1,5 +1,5 @@
-@import 'theming';
+@use "theming" as *;
 
-@import 'directives/button';
-@import 'directives/tooltip';
-@import 'directives/menu';
+@use "directives/button" as *;
+@use "directives/tooltip" as *;
+@use "directives/menu" as *;

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
 
   selector: 'mem-icon-movie-settings-outline',
   templateUrl: './movie-settings-outline.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class MemIconMovieSettingsOutlineComponent {}

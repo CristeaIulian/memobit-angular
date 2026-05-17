@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../theming";
+@use "../variables" as *;
+@use "../theming" as *;
 
 // @Todo: Disable state text is almost invisible
 

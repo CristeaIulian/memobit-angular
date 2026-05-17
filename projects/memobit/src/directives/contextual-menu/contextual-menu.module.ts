@@ -4,6 +4,6 @@ import { ContextualMenuDirective } from './contextual-menu.directive';
 
 @NgModule({
   declarations: [ContextualMenuDirective],
-  exports: [ContextualMenuDirective]
+  exports: [ContextualMenuDirective],
 })
 export class ContextualMenuModule {}

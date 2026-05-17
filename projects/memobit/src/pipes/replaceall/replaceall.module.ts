@@ -4,6 +4,6 @@ import { ReplaceAllPipe } from './replaceall.pipe';
 
 @NgModule({
   declarations: [ReplaceAllPipe],
-  exports: [ReplaceAllPipe]
+  exports: [ReplaceAllPipe],
 })
 export class ReplaceAllModule {}

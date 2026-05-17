@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
 
   selector: 'mem-icon-account-star',
   templateUrl: './account-star.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class MemIconAccountStarComponent {}

@@ -7,6 +7,6 @@ import { NgForOf } from '@angular/common';
 @NgModule({
   declarations: [ListComponent],
   exports: [ListComponent],
-  imports: [RouterLink, NgForOf]
+  imports: [RouterLink, NgForOf],
 })
 export class ListModule {}

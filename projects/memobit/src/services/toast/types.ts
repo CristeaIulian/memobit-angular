@@ -2,7 +2,7 @@ export enum ToastType {
   Info = 'info',
   Success = 'success',
   Warning = 'warning',
-  Error = 'error'
+  Error = 'error',
 }
 
 export enum ToastPosition {
@@ -13,7 +13,7 @@ export enum ToastPosition {
   BottomRight = 'bottom-right',
   Bottom = 'bottom',
   BottomLeft = 'bottom-left',
-  Left = 'left'
+  Left = 'left',
 }
 
 export interface ToastOptions {

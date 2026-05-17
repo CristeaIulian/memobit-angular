@@ -1,10 +1,14 @@
 import { Directive, ElementRef, HostListener, Input, OnDestroy } from '@angular/core';
 
 @Directive({
-  selector: '[memTooltip]'
+  standalone: false,
+  selector: '[memTooltip]',
 })
 export class TooltipDirective implements OnDestroy {
-  constructor(private el: ElementRef, private tooltipRef: ElementRef) {}
+  constructor(
+    private el: ElementRef,
+    private tooltipRef: ElementRef,
+  ) {}
 
   @Input() memTooltip? = '';
   @Input() memTooltipPosition: 'above' | 'below' | 'left' | 'right' = 'below';
@@ -37,22 +41,22 @@ export class TooltipDirective implements OnDestroy {
       case 'below':
         return {
           left: `${window.scrollX + boundingRect.left + boundingRect.width / 2 - tooltipWidth / 2}px`,
-          top: `${window.scrollY + boundingRect.top + boundingRect.height + offset}px`
+          top: `${window.scrollY + boundingRect.top + boundingRect.height + offset}px`,
         };
       case 'above':
         return {
           left: `${window.scrollX + boundingRect.left + boundingRect.width / 2 - tooltipWidth / 2}px`,
-          top: `${window.scrollY + boundingRect.top - boundingRect.height - offset}px`
+          top: `${window.scrollY + boundingRect.top - boundingRect.height - offset}px`,
         };
       case 'left':
         return {
           left: `${window.scrollX + boundingRect.left - tooltipWidth - offset}px`,
-          top: `${window.scrollY + boundingRect.top + boundingRect.height / 2 - tooltipHeight / 2}px`
+          top: `${window.scrollY + boundingRect.top + boundingRect.height / 2 - tooltipHeight / 2}px`,
         };
       case 'right':
         return {
           left: `${window.scrollX + boundingRect.left + boundingRect.width + offset}px`,
-          top: `${window.scrollY + boundingRect.top + boundingRect.height / 2 - tooltipHeight / 2}px`
+          top: `${window.scrollY + boundingRect.top + boundingRect.height / 2 - tooltipHeight / 2}px`,
         };
     }
   };

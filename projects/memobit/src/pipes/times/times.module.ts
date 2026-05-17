@@ -1,7 +1,6 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 
 import { TimesPipe } from './times.pipe';
-
 
 @NgModule({
   declarations: [TimesPipe],

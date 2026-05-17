@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { Theme } from './types';
 
 @Component({
+  standalone: false,
   selector: 'mem-theme-selector',
   templateUrl: './theme-selector.component.html',
-  styleUrls: ['./theme-selector.component.scss']
+  styleUrls: ['./theme-selector.component.scss'],
 })
 export class ThemeSelectorComponent implements OnInit {
   public options: string[] = [Theme.DarkLinear, Theme.DarkLuna, Theme.DarkMaterial].map((theme) => <string>theme);

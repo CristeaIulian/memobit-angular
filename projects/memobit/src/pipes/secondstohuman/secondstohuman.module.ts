@@ -4,6 +4,6 @@ import { SecondsToHumanPipe } from './secondstohuman.pipe';
 
 @NgModule({
   declarations: [SecondsToHumanPipe],
-  exports: [SecondsToHumanPipe]
+  exports: [SecondsToHumanPipe],
 })
 export class SecondsToHumanModule {}

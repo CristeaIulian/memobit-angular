@@ -7,6 +7,7 @@ export interface InputTextUpdateEvent {
 }
 
 @Component({
+  standalone: false,
   selector: 'mem-input-text',
   templateUrl: './input-text.component.html',
   styleUrls: ['input-text-component.scss'],
@@ -14,9 +15,9 @@ export interface InputTextUpdateEvent {
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: forwardRef((): typeof InputTextComponent => InputTextComponent)
-    }
-  ]
+      useExisting: forwardRef((): typeof InputTextComponent => InputTextComponent),
+    },
+  ],
 })
 export class InputTextComponent implements ControlValueAccessor, OnChanges {
   @Input() public formControlName: string = '';

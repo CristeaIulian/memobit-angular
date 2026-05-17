@@ -4,6 +4,6 @@ import { IndeterminateProgressBarComponent } from './indeterminate-progress-bar.
 @NgModule({
   declarations: [IndeterminateProgressBarComponent],
   exports: [IndeterminateProgressBarComponent],
-  imports: []
+  imports: [],
 })
 export class IndeterminateProgressBarModule {}

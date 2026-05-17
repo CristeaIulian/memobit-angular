@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-delimiter',
   templateUrl: './delimiter.component.html',
 
-  styleUrls: ['./delimiter.component.scss']
+  styleUrls: ['./delimiter.component.scss'],
 })
 export class DelimiterComponent implements OnInit {
   @Input() hasVerticalMargins = false;

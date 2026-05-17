@@ -4,6 +4,6 @@ import { FilterByPipe } from './filterby.pipe';
 
 @NgModule({
   declarations: [FilterByPipe],
-  exports: [FilterByPipe]
+  exports: [FilterByPipe],
 })
 export class FilterByModule {}

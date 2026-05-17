@@ -4,6 +4,6 @@ import { FormFieldComponent } from './form-field.component';
 @NgModule({
   declarations: [FormFieldComponent],
   exports: [FormFieldComponent],
-  imports: []
+  imports: [],
 })
 export class FormFieldModule {}

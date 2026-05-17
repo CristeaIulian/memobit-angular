@@ -16,7 +16,7 @@ describe('BreadcrumbComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [MockMemIconComponent, RouterLinkDirectiveStub],
-      declarations: [BreadcrumbComponent]
+      declarations: [BreadcrumbComponent],
     }).compileComponents();
   }));
 

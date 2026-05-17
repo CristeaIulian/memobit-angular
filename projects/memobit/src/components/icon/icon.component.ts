@@ -3,6 +3,7 @@ import { Component, ElementRef, Input, OnChanges, SimpleChanges, AfterViewInit, 
 import { IconSize, iconsList } from './types';
 
 @Component({
+  standalone: false,
   selector: 'mem-icon',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss'],

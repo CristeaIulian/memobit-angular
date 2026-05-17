@@ -8,6 +8,7 @@ interface PaginatorOptions {
 }
 
 @Component({
+  standalone: false,
   selector: 'mem-paginator',
   templateUrl: './paginator.component.html',
   styleUrls: ['./paginator.component.scss'],
@@ -15,9 +16,9 @@ interface PaginatorOptions {
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: forwardRef((): typeof PaginatorComponent => PaginatorComponent)
-    }
-  ]
+      useExisting: forwardRef((): typeof PaginatorComponent => PaginatorComponent),
+    },
+  ],
 })
 export class PaginatorComponent implements OnInit, OnChanges {
   @Input() public numberOfRecords: number = 0;
@@ -35,7 +36,7 @@ export class PaginatorComponent implements OnInit, OnChanges {
     this.calculatePaginator({ numberOfRecords: this.numberOfRecords, currentPage: this.currentPage, recordsPerPage: this.recordsPerPage });
     this.recordsPerPageDropdownOptions = this.recordsPerPageOptions.map((recordsPerPage): { id: number; label: string } => ({
       id: recordsPerPage,
-      label: recordsPerPage.toString()
+      label: recordsPerPage.toString(),
     }));
 
     if (!this.recordsPerPageOptions.includes(this.recordsPerPage)) {

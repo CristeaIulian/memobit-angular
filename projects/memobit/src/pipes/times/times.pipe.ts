@@ -1,6 +1,9 @@
 import { PipeTransform, Pipe } from '@angular/core';
 
-@Pipe({ name: 'times'})
+@Pipe({
+  standalone: false,
+  name: 'times',
+})
 export class TimesPipe implements PipeTransform {
   transform<T>(value: number): Iterable<T> {
     const iterable = <Iterable<T>>{};

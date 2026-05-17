@@ -1,5 +1,6 @@
-@import 'index'; // memobit styles @Todo: these should not be here...
-@import 'variables'; // memobit variables
+@use "index" as *; // memobit styles @Todo: these should not be here...
+@use "theming" as *; // memobit theme variables
+@use "variables" as *; // memobit variables
 
 body {
   /* width */
@@ -27,7 +28,7 @@ body {
   color: $bodyColor;
   background-color: $bodyBgColor;
   font-size: $bodyFs;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   margin: 0;
 
   a {

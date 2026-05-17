@@ -4,6 +4,6 @@ import { ButtonDirective } from './button.directive';
 
 @NgModule({
   declarations: [ButtonDirective],
-  exports: [ButtonDirective]
+  exports: [ButtonDirective],
 })
 export class ButtonModule {}

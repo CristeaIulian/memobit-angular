@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-icon-technology-react',
 
   template: `<svg xmlns="http://www.w3.org/2000/svg" width="26.95" height="24" viewBox="0 0 256 228">

@@ -7,6 +7,6 @@ import { TabComponent } from './tab.component';
 @NgModule({
   declarations: [TabComponent],
   exports: [TabComponent],
-  imports: [ButtonModule, NgForOf]
+  imports: [ButtonModule, NgForOf],
 })
 export class TabModule {}

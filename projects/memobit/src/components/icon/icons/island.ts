@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
 
   selector: 'mem-icon-island',
   templateUrl: './island.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class MemIconIslandComponent {}

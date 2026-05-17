@@ -1,10 +1,11 @@
 import { AfterContentInit, Component, ElementRef } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'mem-form-field',
   templateUrl: './form-field.component.html',
 
-  styleUrls: ['./form-field.component.scss']
+  styleUrls: ['./form-field.component.scss'],
 })
 export class FormFieldComponent implements AfterContentInit {
   constructor(private elementRef: ElementRef) {}

@@ -5,6 +5,6 @@ import { SelectModule } from '../select/select.module';
 @NgModule({
   declarations: [ThemeSelectorComponent],
   exports: [ThemeSelectorComponent],
-  imports: [SelectModule]
+  imports: [SelectModule],
 })
 export class ThemeSelectorModule {}

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
 
   selector: 'mem-icon-bio',
   templateUrl: './bio.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class MemIconBioComponent {}

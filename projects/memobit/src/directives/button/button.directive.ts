@@ -1,7 +1,8 @@
 import { Directive, ElementRef, HostListener, Input, OnChanges, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[memButton]'
+  standalone: false,
+  selector: '[memButton]',
 })
 export class ButtonDirective implements OnInit, OnChanges {
   constructor(private el: ElementRef) {}

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
 
   selector: 'mem-icon-water-polo',
   templateUrl: './water-polo.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class MemIconWaterPoloComponent {}
