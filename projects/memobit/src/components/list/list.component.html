@@ -1,7 +1,10 @@
 <div class="main">
-    <ng-container *ngFor="let category of items">
-        <label class="title">{{ category.label }}</label>
-        <ul>
+    <ng-container *ngFor="let category of items; let i = index">
+        <button type="button" class="title" [class.isExpanded]="expanded[i]" (click)="toggle(i)">
+            <span class="title-label">{{ category.label }}</span>
+            <mem-icon class="title-caret" icon="caret-down-outline" [size]="16"></mem-icon>
+        </button>
+        <ul *ngIf="expanded[i]">
             <li *ngFor="let item of category.items">
                 <a [routerLink]="item.path" [class.isSelected]="item.isSelected"> {{ item.label }} </a>
             </li>

@@ -40,6 +40,10 @@
   &.mem-button-variant-contained {
     border: 1px solid $buttonVariantContainedBorderColor;
     padding: $s-16;
+
+    &:not(:disabled):hover {
+      border: 1px solid $buttonVariantContainedBorderColor;
+    }
   }
 
   &.mem-button-variant-tab {
@@ -47,6 +51,10 @@
     padding: $s-16;
     border-radius: 0;
     height: auto;
+
+    &:not(:disabled):hover {
+      border: 1px solid $buttonVariantContainedBorderColor;
+    }
   }
 
   span.mem-ripple {

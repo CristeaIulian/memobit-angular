@@ -4,18 +4,45 @@
 .main {
   background-color: $bodyBgColor;
 
-  label.title {
+  button.title {
     font-weight: 600;
     text-transform: capitalize;
     background-color: $listCategoryBgColor;
-    width: calc(100% - $s-32);
-    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: $s-8;
     padding: $s-16;
     color: $listCategoryColor;
     font-size: $fs-14;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: inherit;
 
-    & + label.title {
+    & + button.title {
       margin-top: $s-8;
+    }
+
+    .title-label {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .title-caret {
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+      transform: rotate(-90deg);
+    }
+
+    &.isExpanded {
+      .title-caret {
+        transform: rotate(0deg);
+      }
     }
   }
 
