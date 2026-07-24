@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-flash',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
     <defs>
       <linearGradient id="vscodeIconsFileTypeFlash0" x1="28.841" x2="3.828" y1="29.545" y2="3.161" gradientUnits="userSpaceOnUse">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { Theme } from './types';
 
@@ -6,6 +6,7 @@ import { Theme } from './types';
   standalone: false,
   selector: 'mem-theme-selector',
   templateUrl: './theme-selector.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./theme-selector.component.scss'],
 })
 export class ThemeSelectorComponent implements OnInit {

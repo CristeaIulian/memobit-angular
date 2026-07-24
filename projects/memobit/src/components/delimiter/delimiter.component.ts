@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-delimiter',
   templateUrl: './delimiter.component.html',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./delimiter.component.scss'],
 })
 export class DelimiterComponent implements OnInit {

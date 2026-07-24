@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnChanges, SimpleChanges, AfterViewInit, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, SimpleChanges, AfterViewInit, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { IconSize, iconsList } from './types';
 
@@ -6,6 +6,7 @@ import { IconSize, iconsList } from './types';
   standalone: false,
   selector: 'mem-icon',
   templateUrl: './icon.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./icon.component.scss'],
 })
 export class IconComponent implements OnInit, OnChanges, AfterViewInit {

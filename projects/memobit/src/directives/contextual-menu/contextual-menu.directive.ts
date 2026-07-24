@@ -39,7 +39,7 @@ export class ContextualMenuDirective implements OnDestroy {
     }
   }
 
-  @HostListener('click', ['$event']) onMouseClick(): void {
+  @HostListener('click') onMouseClick(): void {
     if (!this.isMenuCreated) {
       this.setMenu();
     }

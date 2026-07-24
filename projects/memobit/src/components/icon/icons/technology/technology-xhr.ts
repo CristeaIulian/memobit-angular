@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-xhr',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" stroke="#3c790a">
       <circle cx="50" cy="50" r="45" stroke-width="10" fill="#fff" />

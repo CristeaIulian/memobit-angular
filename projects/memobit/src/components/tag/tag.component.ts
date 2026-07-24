@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 import { Tag } from './types';
 
@@ -6,6 +6,7 @@ import { Tag } from './types';
   standalone: false,
   selector: 'mem-tag',
   templateUrl: './tag.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./tag.component.scss'],
 })
 export class TagComponent {

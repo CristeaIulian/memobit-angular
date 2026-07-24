@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-zend-framework',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="49.55" height="24" viewBox="0 0 256 124">
     <g fill="#6fb643">
       <path

@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-karma',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="31.04" height="24" viewBox="0 0 256 198">
     <path fill="#429f87" d="m154.565 138.602l39.246 58.547h62.043l-70.31-103.883zM29.492 169.994l28.736-27.07l45.942 54.225L74.678 88.375l-24.9 40.962z" />
     <path

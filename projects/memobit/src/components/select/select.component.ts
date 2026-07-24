@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnChanges, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnChanges, Output, ChangeDetectionStrategy } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { DataSet, SelectedOption } from './types';
@@ -9,6 +9,7 @@ import { InputTextUpdateEvent } from '@memobit/components/input-text/input-text.
   selector: 'mem-select',
   templateUrl: './select.component.html',
   styleUrls: ['select.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

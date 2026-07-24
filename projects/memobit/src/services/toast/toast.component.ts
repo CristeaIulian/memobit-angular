@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 import { ToastPosition, ToastType } from './types';
 
@@ -6,6 +6,7 @@ import { ToastPosition, ToastType } from './types';
   selector: 'mem-toast',
   templateUrl: './toast.component.html',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./toast.component.scss'],
 })
 export class ToastComponent {

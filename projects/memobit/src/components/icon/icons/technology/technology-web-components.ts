@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-web-components',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="29.4" height="24" viewBox="0 0 256 209">
     <defs>
       <linearGradient id="logosWebcomponents0" x1="0%" x2="100%" y1="50%" y2="50%">

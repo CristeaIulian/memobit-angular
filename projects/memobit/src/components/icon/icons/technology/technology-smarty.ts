@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-smarty',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
     <defs>
       <linearGradient id="vscodeIconsFileTypeSmarty0" x1="13.859" x2="18.106" y1="29.219" y2="29.219" gradientUnits="userSpaceOnUse">

@@ -1,9 +1,10 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-scroll-to-top',
   templateUrl: './scroll-to-top.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['scroll-to-top.component.scss'],
 })
 export class ScrollToTopComponent {

@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { IconSize } from '../icon/types';
 
 @Component({
   standalone: false,
   selector: 'mem-stars',
   templateUrl: './stars.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./stars.component.scss'],
 })
 export class StarsComponent implements OnInit {

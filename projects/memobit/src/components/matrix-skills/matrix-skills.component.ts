@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 import { MatrixItem } from './types';
 
@@ -6,6 +6,7 @@ import { MatrixItem } from './types';
   standalone: false,
   selector: 'mem-matrix-skills',
   templateUrl: './matrix-skills.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./matrix-skills.component.scss'],
 })
 export class MatrixSkillsComponent {

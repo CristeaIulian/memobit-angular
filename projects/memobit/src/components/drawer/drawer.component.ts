@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { DrawerItems } from './types';
@@ -7,6 +7,7 @@ import { DrawerItems } from './types';
   standalone: false,
   selector: 'mem-drawer',
   templateUrl: './drawer.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./drawer.component.scss'],
 })
 export class DrawerComponent {

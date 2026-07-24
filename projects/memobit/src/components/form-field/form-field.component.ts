@@ -1,10 +1,11 @@
-import { AfterContentInit, Component, ElementRef } from '@angular/core';
+import { AfterContentInit, Component, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-form-field',
   templateUrl: './form-field.component.html',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./form-field.component.scss'],
 })
 export class FormFieldComponent implements AfterContentInit {

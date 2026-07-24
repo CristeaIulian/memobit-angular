@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-prettier',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
     <rect width="24.381" height="12.19" x="182.857" y="48.762" fill="#56b3b4" rx="5" />
     <rect width="73.143" height="12.19" y="243.81" fill="#ea5e5e" rx="5" />

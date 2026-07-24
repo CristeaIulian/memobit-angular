@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-highcharts',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="25.29" height="24" viewBox="0 0 256 243">
     <path fill="#78758c" d="m178.6 119.7l-1.8-3.1l-60.3-19.7l-1.7 2l-2.6.6l-53.6 125.2l.7 3.8L188.4 174l1.1-2.2l-9-50z" />
     <path fill="#a3edba" d="m59.3 228.5l55.5-129.6L.8 61.7z" />

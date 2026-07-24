@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-checkbox-checked',
   templateUrl: './checkbox-checked.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: [],
 })
 export class MemIconCheckboxCheckedComponent {}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SelectedOption } from '@memobit/components/select/types';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -6,6 +6,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   standalone: false,
   selector: 'app-playground',
   templateUrl: './playground.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './playground.component.scss',
 })
 export class PlaygroundComponent {

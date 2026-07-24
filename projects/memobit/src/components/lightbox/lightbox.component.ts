@@ -1,10 +1,23 @@
-import { Component, ElementRef, EventEmitter, HostListener, Input, Output, ViewChild, AfterViewInit, OnInit, OnChanges } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  Input,
+  Output,
+  ViewChild,
+  AfterViewInit,
+  OnInit,
+  OnChanges,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { LightboxItem } from './types';
 
 @Component({
   standalone: false,
   selector: 'mem-lightbox',
   templateUrl: './lightbox.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./lightbox.component.scss'],
 })
 export class LightboxComponent implements OnChanges, AfterViewInit {

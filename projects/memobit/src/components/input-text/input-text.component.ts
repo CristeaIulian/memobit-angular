@@ -1,4 +1,4 @@
-import { Component, EventEmitter, forwardRef, Input, OnChanges, Output } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, OnChanges, Output, ChangeDetectionStrategy } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export interface InputTextUpdateEvent {
@@ -11,6 +11,7 @@ export interface InputTextUpdateEvent {
   selector: 'mem-input-text',
   templateUrl: './input-text.component.html',
   styleUrls: ['input-text-component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-jquery-ui',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <svg height="24" viewBox="0 14.509 111.682 98.117" width="24" xmlns="http://www.w3.org/2000/svg">
     <g fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
       <path

@@ -19,5 +19,5 @@
         </div>
         <div class="memobit-lightbox-close" (click)="onClickClose()"><mem-icon class="data-preview-close" icon="close" [size]="16"></mem-icon></div>
     </div>
-    <div class="memobit-lightbox-content"><img [src]="selectedItem?.imageSrc" [alt]="lightboxTitle" /></div>
+    <div class="memobit-lightbox-content"><img [src]="$safeNavigationMigration(selectedItem?.imageSrc)" [alt]="lightboxTitle" /></div>
 </div>

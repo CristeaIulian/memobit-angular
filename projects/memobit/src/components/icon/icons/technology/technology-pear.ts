@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'mem-icon-technology-pear',
 
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: ` <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
     <g fill="none">
       <path fill="url(#f1575id7)" d="M7.12 2.291L3 3.891a4.338 4.338 0 0 0 5.62 2.48l4.12-1.6a4.355 4.355 0 0 0-5.62-2.48" />

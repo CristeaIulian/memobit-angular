@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { AccordionItem } from './types';
 
 @Component({
   standalone: false,
   selector: 'mem-accordion',
   templateUrl: './accordion.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./accordion.component.scss'],
 })
 export class AccordionComponent {

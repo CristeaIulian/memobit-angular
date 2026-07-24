@@ -1,4 +1,4 @@
-import { ApplicationRef, ComponentFactoryResolver, ComponentRef, EmbeddedViewRef, Injectable, Injector } from '@angular/core';
+import { ApplicationRef, ComponentRef, createComponent, EmbeddedViewRef, EnvironmentInjector, Injectable, Injector } from '@angular/core';
 
 import { ToastComponent } from './toast.component';
 import { ToastOptions, ToastPosition, ToastType } from './types';
@@ -9,14 +9,17 @@ import { ToastOptions, ToastPosition, ToastType } from './types';
 export class ToastService {
   private defaultTimeout = 2500;
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver,
+    private environmentInjector: EnvironmentInjector,
     private appRef: ApplicationRef,
     private injector: Injector,
   ) {}
 
   public show(options: ToastOptions): void {
     // 1. Create a component reference from the component
-    const componentRef: ComponentRef<ToastComponent> = this.componentFactoryResolver.resolveComponentFactory(ToastComponent).create(this.injector);
+    const componentRef: ComponentRef<ToastComponent> = createComponent(ToastComponent, {
+      environmentInjector: this.environmentInjector,
+      elementInjector: this.injector,
+    });
 
     componentRef.instance.message = options.message;
     componentRef.instance.type = options.type || ToastType.Info;

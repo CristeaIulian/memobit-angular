@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
 import { Tab } from './types';
 
 @Component({
   standalone: false,
   selector: 'mem-tab',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './tab.component.html',
 })
 export class TabComponent implements OnChanges {
