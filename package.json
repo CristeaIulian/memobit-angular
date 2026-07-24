@@ -12,6 +12,11 @@
     "publish": "npm publish --access public"
   },
   "private": false,
+  "overrides": {
+    "@hono/node-server": ">=2.0.5",
+    "uuid": ">=11.1.1",
+    "webpack-dev-server": "^5.2.6"
+  },
   "dependencies": {
     "@angular/animations": "22.0.8",
     "@angular/common": "22.0.8",
