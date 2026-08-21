@@ -9,9 +9,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test-coverage": "ng test --coverage=true",
-    "publish": "npm publish --access public"
+    "publish": "cd projects/memobit/src && npm publish --access public"
   },
-  "private": false,
+  "private": true,
   "overrides": {
     "@hono/node-server": ">=2.0.5",
     "postcss": ">=8.5.26",
