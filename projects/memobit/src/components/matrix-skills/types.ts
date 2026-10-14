@@ -1,4 +1,4 @@
 export interface MatrixItem {
-  label: string;
-  percentage: number;
+    label: string;
+    percentage: number;
 }

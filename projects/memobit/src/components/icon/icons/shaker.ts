@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: false,
+    standalone: false,
 
-  selector: 'mem-icon-shaker',
-  templateUrl: './shaker.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  styleUrls: [],
+    selector: 'mem-icon-shaker',
+    templateUrl: './shaker.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrls: [],
 })
 export class MemIconShakerComponent {}

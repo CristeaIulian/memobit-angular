@@ -1,14 +1,14 @@
-@use "../../styles/theming" as *;
+@use '../../styles/theming' as *;
 
 .stars-container {
-  display: flex;
-
-  .star {
     display: flex;
-    align-items: center;
 
-    ic-icon {
-      line-height: 13px;
+    .star {
+        display: flex;
+        align-items: center;
+
+        ic-icon {
+            line-height: 13px;
+        }
     }
-  }
 }

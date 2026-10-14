@@ -1,12 +1,12 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .memobit-paginator {
-  display: flex;
-  column-gap: $s-16;
-  align-items: center;
-
-  .direction-buttons {
     display: flex;
-    column-gap: $s-8;
-  }
+    column-gap: $s-16;
+    align-items: center;
+
+    .direction-buttons {
+        display: flex;
+        column-gap: $s-8;
+    }
 }

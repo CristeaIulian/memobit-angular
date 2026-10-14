@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: false,
+    standalone: false,
 
-  selector: 'mem-icon-image-filter-hdr',
-  templateUrl: './image-filter-hdr.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  styleUrls: [],
+    selector: 'mem-icon-image-filter-hdr',
+    templateUrl: './image-filter-hdr.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrls: [],
 })
 export class MemIconImageFilterHdrComponent {}

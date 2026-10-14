@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: false,
+    standalone: false,
 
-  selector: 'mem-icon-movie-filter-outline',
-  templateUrl: './movie-filter-outline.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  styleUrls: [],
+    selector: 'mem-icon-movie-filter-outline',
+    templateUrl: './movie-filter-outline.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrls: [],
 })
 export class MemIconMovieFilterOutlineComponent {}

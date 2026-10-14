@@ -1,88 +1,88 @@
 import { Directive, ElementRef, HostListener, Input, OnDestroy } from '@angular/core';
 
 @Directive({
-  standalone: false,
-  selector: '[memTooltip]',
+    standalone: false,
+    selector: '[memTooltip]',
 })
 export class TooltipDirective implements OnDestroy {
-  constructor(
-    private el: ElementRef,
-    private tooltipRef: ElementRef,
-  ) {}
+    constructor(
+        private el: ElementRef,
+        private tooltipRef: ElementRef
+    ) {}
 
-  @Input() memTooltip? = '';
-  @Input() memTooltipPosition: 'above' | 'below' | 'left' | 'right' = 'below';
+    @Input() memTooltip? = '';
+    @Input() memTooltipPosition: 'above' | 'below' | 'left' | 'right' = 'below';
 
-  @HostListener('mouseenter') onMouseEnter(): void {
-    if (!this.memTooltip) {
-      return;
+    @HostListener('mouseenter') onMouseEnter(): void {
+        if (!this.memTooltip) {
+            return;
+        }
+
+        this.setTooltip();
     }
 
-    this.setTooltip();
-  }
-
-  public ngOnDestroy(): void {
-    this.removeTooltip();
-  }
-
-  @HostListener('mouseleave') onMouseLeave(): void {
-    if (!this.memTooltip) {
-      return;
+    public ngOnDestroy(): void {
+        this.removeTooltip();
     }
 
-    this.removeTooltip();
-  }
+    @HostListener('mouseleave') onMouseLeave(): void {
+        if (!this.memTooltip) {
+            return;
+        }
 
-  private getPositions = (tooltipWidth: number, tooltipHeight: number): { left: string; top: string } => {
-    const boundingRect: DOMRect = this.el.nativeElement.getBoundingClientRect();
-    const offset = 10;
-
-    switch (this.memTooltipPosition) {
-      case 'below':
-        return {
-          left: `${window.scrollX + boundingRect.left + boundingRect.width / 2 - tooltipWidth / 2}px`,
-          top: `${window.scrollY + boundingRect.top + boundingRect.height + offset}px`,
-        };
-      case 'above':
-        return {
-          left: `${window.scrollX + boundingRect.left + boundingRect.width / 2 - tooltipWidth / 2}px`,
-          top: `${window.scrollY + boundingRect.top - boundingRect.height - offset}px`,
-        };
-      case 'left':
-        return {
-          left: `${window.scrollX + boundingRect.left - tooltipWidth - offset}px`,
-          top: `${window.scrollY + boundingRect.top + boundingRect.height / 2 - tooltipHeight / 2}px`,
-        };
-      case 'right':
-        return {
-          left: `${window.scrollX + boundingRect.left + boundingRect.width + offset}px`,
-          top: `${window.scrollY + boundingRect.top + boundingRect.height / 2 - tooltipHeight / 2}px`,
-        };
-    }
-  };
-
-  private setTooltip(): void {
-    if (!this.memTooltip) {
-      return;
+        this.removeTooltip();
     }
 
-    const divTooltip = document.createElement('div');
+    private getPositions = (tooltipWidth: number, tooltipHeight: number): { left: string; top: string } => {
+        const boundingRect: DOMRect = this.el.nativeElement.getBoundingClientRect();
+        const offset = 10;
 
-    divTooltip.innerText = this.memTooltip;
+        switch (this.memTooltipPosition) {
+            case 'below':
+                return {
+                    left: `${window.scrollX + boundingRect.left + boundingRect.width / 2 - tooltipWidth / 2}px`,
+                    top: `${window.scrollY + boundingRect.top + boundingRect.height + offset}px`,
+                };
+            case 'above':
+                return {
+                    left: `${window.scrollX + boundingRect.left + boundingRect.width / 2 - tooltipWidth / 2}px`,
+                    top: `${window.scrollY + boundingRect.top - boundingRect.height - offset}px`,
+                };
+            case 'left':
+                return {
+                    left: `${window.scrollX + boundingRect.left - tooltipWidth - offset}px`,
+                    top: `${window.scrollY + boundingRect.top + boundingRect.height / 2 - tooltipHeight / 2}px`,
+                };
+            case 'right':
+                return {
+                    left: `${window.scrollX + boundingRect.left + boundingRect.width + offset}px`,
+                    top: `${window.scrollY + boundingRect.top + boundingRect.height / 2 - tooltipHeight / 2}px`,
+                };
+        }
+    };
 
-    divTooltip.classList.add('mem-tooltip');
+    private setTooltip(): void {
+        if (!this.memTooltip) {
+            return;
+        }
 
-    this.tooltipRef.nativeElement = divTooltip;
+        const divTooltip = document.createElement('div');
 
-    document.body.append(divTooltip);
+        divTooltip.innerText = this.memTooltip;
 
-    const positions = this.getPositions(divTooltip.offsetWidth, divTooltip.offsetHeight);
+        divTooltip.classList.add('mem-tooltip');
 
-    divTooltip.style.left = positions.left;
-    divTooltip.style.top = positions.top;
-  }
+        this.tooltipRef.nativeElement = divTooltip;
 
-  private removeTooltip(): void {
-    this.tooltipRef.nativeElement.remove();
-  }
+        document.body.append(divTooltip);
+
+        const positions = this.getPositions(divTooltip.offsetWidth, divTooltip.offsetHeight);
+
+        divTooltip.style.left = positions.left;
+        divTooltip.style.top = positions.top;
+    }
+
+    private removeTooltip(): void {
+        this.tooltipRef.nativeElement.remove();
+    }
 }

@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: false,
+    standalone: false,
 
-  selector: 'mem-icon-content-save',
-  templateUrl: './content-save.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  styleUrls: [],
+    selector: 'mem-icon-content-save',
+    templateUrl: './content-save.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrls: [],
 })
 export class MemIconContentSaveComponent {}

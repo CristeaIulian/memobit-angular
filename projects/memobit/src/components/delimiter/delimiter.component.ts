@@ -1,37 +1,37 @@
 import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: false,
-  selector: 'mem-delimiter',
-  templateUrl: './delimiter.component.html',
+    standalone: false,
+    selector: 'mem-delimiter',
+    templateUrl: './delimiter.component.html',
 
-  changeDetection: ChangeDetectionStrategy.Eager,
-  styleUrls: ['./delimiter.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrls: ['./delimiter.component.scss'],
 })
 export class DelimiterComponent implements OnInit {
-  @Input() hasVerticalMargins = false;
-  @Input() hasTopMargin = false;
-  @Input() hasBottomMargin = false;
-  @Input() hasCanceledHorizontalMargins = false;
-  public cssClasses: string[] = [];
+    @Input() hasVerticalMargins = false;
+    @Input() hasTopMargin = false;
+    @Input() hasBottomMargin = false;
+    @Input() hasCanceledHorizontalMargins = false;
+    public cssClasses: string[] = [];
 
-  public ngOnInit(): void {
-    this.cssClasses = ['delimiter'];
+    public ngOnInit(): void {
+        this.cssClasses = ['delimiter'];
 
-    if (this.hasVerticalMargins) {
-      this.cssClasses.push('delimiter-with-vertical-margins');
+        if (this.hasVerticalMargins) {
+            this.cssClasses.push('delimiter-with-vertical-margins');
+        }
+
+        if (this.hasTopMargin) {
+            this.cssClasses.push('delimiter-top-margin');
+        }
+
+        if (this.hasBottomMargin) {
+            this.cssClasses.push('delimiter-bottom-margin');
+        }
+
+        if (this.hasCanceledHorizontalMargins) {
+            this.cssClasses.push('delimiter-cancel-horizontal-margins');
+        }
     }
-
-    if (this.hasTopMargin) {
-      this.cssClasses.push('delimiter-top-margin');
-    }
-
-    if (this.hasBottomMargin) {
-      this.cssClasses.push('delimiter-bottom-margin');
-    }
-
-    if (this.hasCanceledHorizontalMargins) {
-      this.cssClasses.push('delimiter-cancel-horizontal-margins');
-    }
-  }
 }

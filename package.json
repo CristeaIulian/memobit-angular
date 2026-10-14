@@ -9,7 +9,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test-coverage": "ng test --coverage=true",
-    "publish": "cd projects/memobit/src && npm publish --access public"
+    "publish": "cd projects/memobit/src && npm publish --access public",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,mjs,cjs,css,scss}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mjs,cjs,css,scss}\""
   },
   "private": true,
   "overrides": {
@@ -42,7 +44,7 @@
     "jest-preset-angular": "17.0.0",
     "jsdom": "27.3.0",
     "ng-packagr": "22.2.1",
-    "prettier": "3.8.3",
+    "prettier": "3.9.9",
     "typescript": "6.0.3"
   }
 }

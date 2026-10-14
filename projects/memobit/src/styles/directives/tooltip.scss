@@ -1,11 +1,11 @@
-@use "../variables" as *;
-@use "../theming" as *;
+@use '../variables' as *;
+@use '../theming' as *;
 
 .mem-tooltip {
-  position: absolute;
-  z-index: 1000;
-  color: $tooltipColor;
-  background-color: $tooltipBgColor;
-  padding: $s-2 $s-8;
-  border-radius: $borderRadiusSmall;
+    position: absolute;
+    z-index: 1000;
+    color: $tooltipColor;
+    background-color: $tooltipBgColor;
+    padding: $s-2 $s-8;
+    border-radius: $borderRadiusSmall;
 }

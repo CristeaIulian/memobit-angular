@@ -1,22 +1,10 @@
 {
   "semi": true,
-  "trailingComma": "all",
+  "singleQuote": true,
+  "tabWidth": 4,
+  "trailingComma": "es5",
   "printWidth": 160,
-  "useTabs": false,
   "bracketSpacing": true,
-  "arrowParens": "always",
-  "overrides": [
-    {
-      "files": "*.test.js",
-      "options": {
-        "semi": true
-      }
-    },
-    {
-      "files": ["*.html", "legacy/**/*.js"],
-      "options": {
-        "tabWidth": 4
-      }
-    }
-  ]
+  "arrowParens": "avoid",
+  "endOfLine": "lf"
 }

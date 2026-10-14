@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: false,
+    standalone: false,
 
-  selector: 'mem-icon-book-open-page-variant-outline',
-  templateUrl: './book-open-page-variant-outline.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  styleUrls: [],
+    selector: 'mem-icon-book-open-page-variant-outline',
+    templateUrl: './book-open-page-variant-outline.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrls: [],
 })
 export class MemIconBookOpenPageVariantOutlineComponent {}

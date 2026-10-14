@@ -8,46 +8,46 @@ import { BreadcrumbOption } from '../../src/components/breadcrumb/types';
 import { RouterLinkDirectiveStub } from '../mocks/router-link-directive';
 
 describe('BreadcrumbComponent', () => {
-  let component: BreadcrumbComponent;
-  let fixture: ComponentFixture<BreadcrumbComponent>;
+    let component: BreadcrumbComponent;
+    let fixture: ComponentFixture<BreadcrumbComponent>;
 
-  const mockItems: BreadcrumbOption[] = [{ label: 'Home', path: '/home' }, { label: 'About' }];
+    const mockItems: BreadcrumbOption[] = [{ label: 'Home', path: '/home' }, { label: 'About' }];
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [MockMemIconComponent, RouterLinkDirectiveStub],
-      declarations: [BreadcrumbComponent],
-    }).compileComponents();
-  }));
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            imports: [MockMemIconComponent, RouterLinkDirectiveStub],
+            declarations: [BreadcrumbComponent],
+        }).compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(BreadcrumbComponent);
-    component = fixture.componentInstance;
+    beforeEach(() => {
+        fixture = TestBed.createComponent(BreadcrumbComponent);
+        component = fixture.componentInstance;
 
-    // Assume we pass this input to the component
-    component.items = mockItems;
+        // Assume we pass this input to the component
+        component.items = mockItems;
 
-    fixture.detectChanges();
-  });
+        fixture.detectChanges();
+    });
 
-  it('should create the component', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create the component', () => {
+        expect(component).toBeTruthy();
+    });
 
-  it('should show correct labels', () => {
-    fixture.detectChanges(); // trigger Angular to update the DOM
-    const linkElement = fixture.debugElement.query(By.css('a'));
-    const spanElement = fixture.debugElement.query(By.css('span'));
+    it('should show correct labels', () => {
+        fixture.detectChanges(); // trigger Angular to update the DOM
+        const linkElement = fixture.debugElement.query(By.css('a'));
+        const spanElement = fixture.debugElement.query(By.css('span'));
 
-    if (linkElement && linkElement.nativeElement) {
-      expect(linkElement.nativeElement.textContent).toContain('Home');
-    }
+        if (linkElement && linkElement.nativeElement) {
+            expect(linkElement.nativeElement.textContent).toContain('Home');
+        }
 
-    if (spanElement && spanElement.nativeElement) {
-      const spans = spanElement.queryAll(By.css('span'));
-      if (spans[1]) {
-        expect(spans[1].nativeElement.textContent).toContain('About');
-      }
-    }
-  });
+        if (spanElement && spanElement.nativeElement) {
+            const spans = spanElement.queryAll(By.css('span'));
+            if (spans[1]) {
+                expect(spans[1].nativeElement.textContent).toContain('About');
+            }
+        }
+    });
 });

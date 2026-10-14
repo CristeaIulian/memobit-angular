@@ -9,8 +9,8 @@ import { StarsComponent } from './stars.component';
 const coreModules = [NgForOf];
 
 @NgModule({
-  declarations: [StarsComponent],
-  exports: [StarsComponent],
-  imports: [...coreModules, IconModule, TimesModule],
+    declarations: [StarsComponent],
+    exports: [StarsComponent],
+    imports: [...coreModules, IconModule, TimesModule],
 })
 export class StarsModule {}

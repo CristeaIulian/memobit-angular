@@ -3,13 +3,13 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { MatrixItem } from './types';
 
 @Component({
-  standalone: false,
-  selector: 'mem-matrix-skills',
-  templateUrl: './matrix-skills.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  styleUrls: ['./matrix-skills.component.scss'],
+    standalone: false,
+    selector: 'mem-matrix-skills',
+    templateUrl: './matrix-skills.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrls: ['./matrix-skills.component.scss'],
 })
 export class MatrixSkillsComponent {
-  @Input() public items: MatrixItem[] = [];
-  @Input() public levels: string[] = [];
+    @Input() public items: MatrixItem[] = [];
+    @Input() public levels: string[] = [];
 }

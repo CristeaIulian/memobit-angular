@@ -1,4 +1,4 @@
 export interface BreadcrumbOption {
-  label: string;
-  path?: string;
+    label: string;
+    path?: string;
 }

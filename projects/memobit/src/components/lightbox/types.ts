@@ -1,5 +1,5 @@
 export interface LightboxItem {
-  imageSrc: string;
-  isSelected?: boolean;
-  title?: string;
+    imageSrc: string;
+    isSelected?: boolean;
+    title?: string;
 }

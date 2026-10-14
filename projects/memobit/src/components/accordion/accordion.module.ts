@@ -6,8 +6,8 @@ import { SafeHtmlModule } from '../../pipes/safehtml';
 import { IconModule } from '../icon';
 
 @NgModule({
-  declarations: [AccordionComponent],
-  exports: [AccordionComponent],
-  imports: [NgForOf, SafeHtmlModule, IconModule, NgIf],
+    declarations: [AccordionComponent],
+    exports: [AccordionComponent],
+    imports: [NgForOf, SafeHtmlModule, IconModule, NgIf],
 })
 export class AccordionModule {}

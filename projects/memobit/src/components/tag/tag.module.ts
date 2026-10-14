@@ -8,8 +8,8 @@ import { StarsModule } from '../stars';
 import { TagComponent } from './tag.component';
 
 @NgModule({
-  declarations: [TagComponent],
-  exports: [TagComponent],
-  imports: [IconModule, StarsModule, TooltipModule, NgIf],
+    declarations: [TagComponent],
+    exports: [TagComponent],
+    imports: [IconModule, StarsModule, TooltipModule, NgIf],
 })
 export class TagModule {}

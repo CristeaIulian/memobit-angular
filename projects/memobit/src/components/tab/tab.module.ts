@@ -5,8 +5,8 @@ import { ButtonModule } from '../../directives/button';
 
 import { TabComponent } from './tab.component';
 @NgModule({
-  declarations: [TabComponent],
-  exports: [TabComponent],
-  imports: [ButtonModule, NgForOf],
+    declarations: [TabComponent],
+    exports: [TabComponent],
+    imports: [ButtonModule, NgForOf],
 })
 export class TabModule {}

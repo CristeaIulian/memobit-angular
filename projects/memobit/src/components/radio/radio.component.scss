@@ -1,25 +1,25 @@
-@use "../../styles/variables" as *;
-@use "../../styles/theming" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/theming' as *;
 
 .mem-radio {
-  display: flex;
-  gap: $s-8 $s-8;
-
-  span {
     display: flex;
-    align-items: center;
-    column-gap: $s-4;
+    gap: $s-8 $s-8;
 
-    ic-icon {
-      color: $radioIconColor;
+    span {
+        display: flex;
+        align-items: center;
+        column-gap: $s-4;
+
+        ic-icon {
+            color: $radioIconColor;
+        }
+
+        label {
+            cursor: pointer;
+        }
     }
 
-    label {
-      cursor: pointer;
+    &.isStacked {
+        flex-direction: column;
     }
-  }
-
-  &.isStacked {
-    flex-direction: column;
-  }
 }

@@ -14,8 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 const memobitModules = [ThemeSelectorModule];
 
 @NgModule({
-  declarations: [AppComponent, PlaygroundComponent],
-  imports: [RouterModule.forRoot([]), BrowserModule, memobitModules, SelectModule, TextareaModule, CheckboxModule, ReactiveFormsModule],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent, PlaygroundComponent],
+    imports: [RouterModule.forRoot([]), BrowserModule, memobitModules, SelectModule, TextareaModule, CheckboxModule, ReactiveFormsModule],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

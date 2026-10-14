@@ -2,36 +2,36 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { AccordionItem } from './types';
 
 @Component({
-  standalone: false,
-  selector: 'mem-accordion',
-  templateUrl: './accordion.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
-  styleUrls: ['./accordion.component.scss'],
+    standalone: false,
+    selector: 'mem-accordion',
+    templateUrl: './accordion.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
+    styleUrls: ['./accordion.component.scss'],
 })
 export class AccordionComponent {
-  @Input() items: AccordionItem[] = [];
-  @Input() allowMultiOpen: boolean = false;
+    @Input() items: AccordionItem[] = [];
+    @Input() allowMultiOpen: boolean = false;
 
-  constructor() {}
+    constructor() {}
 
-  public onItemClick(currentItem: AccordionItem): void {
-    const alreadyOpenedItem = this.items.find((item: AccordionItem): boolean => Boolean(item.isVisible));
+    public onItemClick(currentItem: AccordionItem): void {
+        const alreadyOpenedItem = this.items.find((item: AccordionItem): boolean => Boolean(item.isVisible));
 
-    if (alreadyOpenedItem?.title === currentItem.title) {
-      alreadyOpenedItem.isVisible = false;
-      return;
+        if (alreadyOpenedItem?.title === currentItem.title) {
+            alreadyOpenedItem.isVisible = false;
+            return;
+        }
+
+        if (!this.allowMultiOpen) {
+            this.items.forEach((item: AccordionItem): void => {
+                item.isVisible = false;
+            });
+        }
+
+        this.items.forEach((item: AccordionItem): void => {
+            if (item.title === currentItem.title) {
+                item.isVisible = true;
+            }
+        });
     }
-
-    if (!this.allowMultiOpen) {
-      this.items.forEach((item: AccordionItem): void => {
-        item.isVisible = false;
-      });
-    }
-
-    this.items.forEach((item: AccordionItem): void => {
-      if (item.title === currentItem.title) {
-        item.isVisible = true;
-      }
-    });
-  }
 }
