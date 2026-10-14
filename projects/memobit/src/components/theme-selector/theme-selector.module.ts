@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 
-import { ThemeSelectorComponent } from './theme-selector.component';
 import { SelectModule } from '../select/select.module';
+
+import { ThemeSelectorComponent } from './theme-selector.component';
+
 @NgModule({
     declarations: [ThemeSelectorComponent],
     exports: [ThemeSelectorComponent],

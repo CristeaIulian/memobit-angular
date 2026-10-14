@@ -1,8 +1,10 @@
+import { NgForOf, NgIf } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { DrawerComponent } from './drawer.component';
 import { IconModule } from '../icon';
-import { NgForOf, NgIf } from '@angular/common';
+
+import { DrawerComponent } from './drawer.component';
+
 @NgModule({
     declarations: [DrawerComponent],
     exports: [DrawerComponent],

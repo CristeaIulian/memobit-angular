@@ -1,12 +1,11 @@
-import { PipeTransform, Pipe } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
     standalone: false,
     name: 'filterBy',
 })
 export class FilterByPipe implements PipeTransform {
-    transform<T>(data: Array<T>, filterColumn: string, filterValue: string): Array<T> {
-        // @ts-ignore
-        return data.filter((el): boolean => el[filterColumn].toLowerCase().includes(filterValue.toLowerCase()));
+    transform<T>(data: Array<T>, filterColumn: keyof T, filterValue: string): Array<T> {
+        return data.filter((el): boolean => String(el[filterColumn]).toLowerCase().includes(filterValue.toLowerCase()));
     }
 }

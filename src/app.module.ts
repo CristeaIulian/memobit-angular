@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app/app.component';
-
-import { ThemeSelectorModule } from '@memobit/components/theme-selector';
-import { PlaygroundComponent } from './playground/playground.component';
+import { RouterModule } from '@angular/router';
+import { CheckboxModule } from '@memobit/components/checkbox';
 import { SelectModule } from '@memobit/components/select';
 import { TextareaModule } from '@memobit/components/textarea';
-import { CheckboxModule } from '@memobit/components/checkbox';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ThemeSelectorModule } from '@memobit/components/theme-selector';
+
+import { AppComponent } from './app/app.component';
+import { PlaygroundComponent } from './playground/playground.component';
 
 const memobitModules = [ThemeSelectorModule];
 

@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
 import { NgClass, NgForOf } from '@angular/common';
+import { NgModule } from '@angular/core';
+
+import { IconModule } from '../icon';
 
 import { RadioComponent } from './radio.component';
-import { IconModule } from '../icon';
+
 @NgModule({
     declarations: [RadioComponent],
     exports: [RadioComponent],

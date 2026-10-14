@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 import { TooltipModule } from '../../directives/tooltip';
 import { IconModule } from '../icon';

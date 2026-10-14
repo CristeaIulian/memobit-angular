@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
 import { NgClass, NgForOf, NgIf } from '@angular/common';
-
-import { InputTextModule } from '../input-text';
-import { TagModule } from '../tag';
-import { IconModule } from '../icon';
+import { NgModule } from '@angular/core';
 
 import { CheckboxModule } from '../checkbox';
+import { IconModule } from '../icon';
+import { InputTextModule } from '../input-text';
+import { TagModule } from '../tag';
 
 import { SelectComponent } from './select.component';
+
 @NgModule({
     declarations: [SelectComponent],
     exports: [SelectComponent],

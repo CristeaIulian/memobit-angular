@@ -1,8 +1,8 @@
-import { Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnChanges, Output, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnChanges, Output } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { InputTextUpdateEvent } from '@memobit/components/input-text/input-text.component';
 
 import { DataSet, SelectedOption } from './types';
-import { InputTextUpdateEvent } from '@memobit/components/input-text/input-text.component';
 
 @Component({
     standalone: false,
@@ -47,18 +47,18 @@ export class SelectComponent implements ControlValueAccessor, OnChanges {
         }
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, no-empty-function
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public onChange: any = (): void => {};
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, no-empty-function
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public onTouch: any = (): void => {};
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public registerOnChange(fn: any): void {
         this.onChange = fn;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public registerOnTouched(fn: any): void {
         this.onTouch = fn;
     }
@@ -107,8 +107,7 @@ export class SelectComponent implements ControlValueAccessor, OnChanges {
 
         const selectedIds: SelectedOption = this.selectedItems.map((item): number => <never>item.id);
 
-        // @ts-ignore
-        this.selectedValue = selectedIds.map((selectedId): string => this.dataSet.find((item): boolean => item.id === selectedId).label).join(', ');
+        this.selectedValue = selectedIds.map((selectedId): string => this.dataSet.find((item): boolean => item.id === selectedId)?.label ?? '').join(', ');
 
         this.onChange(selectedIds);
 
@@ -133,7 +132,6 @@ export class SelectComponent implements ControlValueAccessor, OnChanges {
         if ($event.key === 'Enter') {
             this.addNewItem.emit(value);
             this.isListVisible = false;
-            this.selectedValue;
         }
     }
 
@@ -218,8 +216,7 @@ export class SelectComponent implements ControlValueAccessor, OnChanges {
             return acc;
         }, []);
 
-        // @ts-ignore
-        this.receivedSelectedValues = selected;
+        this.receivedSelectedValues = selected ?? null;
         this.selectedValue = data
             .reduce((acc: string[], item): string[] => {
                 if ((typeof selected === 'number' || typeof selected === 'string') && item.id === selected && item.id) {

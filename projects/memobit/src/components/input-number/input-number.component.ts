@@ -1,4 +1,4 @@
-import { Component, EventEmitter, forwardRef, Input, OnChanges, Output, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, forwardRef, Input, OnChanges, Output } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -32,18 +32,18 @@ export class InputNumberComponent implements ControlValueAccessor, OnChanges {
         }
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, no-empty-function
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public onChange: any = (): void => {};
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, no-empty-function
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public onTouch: any = (): void => {};
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public registerOnChange(fn: any): void {
         this.onChange = fn;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public registerOnTouched(fn: any): void {
         this.onTouch = fn;
     }

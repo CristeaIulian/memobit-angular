@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
 import { NgClass, NgForOf } from '@angular/common';
+import { NgModule } from '@angular/core';
+
+import { IconModule } from '../icon';
 
 import { CheckboxComponent } from './checkbox.component';
-import { IconModule } from '../icon';
+
 @NgModule({
     declarations: [CheckboxComponent],
     exports: [CheckboxComponent],

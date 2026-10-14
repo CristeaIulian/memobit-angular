@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { NgForOf } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { IconModule } from '../icon';
 import { TimesModule } from '../../pipes/times';
+import { IconModule } from '../icon';
 
 import { StarsComponent } from './stars.component';
 

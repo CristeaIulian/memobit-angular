@@ -1,9 +1,10 @@
+import { NgForOf, NgIf } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import { IconModule } from '../icon';
 
 import { ListComponent } from './list.component';
-import { RouterLink } from '@angular/router';
-import { NgForOf, NgIf } from '@angular/common';
-import { IconModule } from '../icon';
 
 @NgModule({
     declarations: [ListComponent],

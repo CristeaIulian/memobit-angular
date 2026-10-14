@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+
 import { IconSize } from '../icon/types';
 
 @Component({
@@ -29,8 +30,7 @@ export class StarsComponent implements OnInit {
         this._setHalf();
     }
 
-    // eslint-disable-next-line // @Todo - fix any type
-    public getStarType(num: number, i: any): string {
+    public getStarType(num: number, i: number): string {
         return !Number.isInteger(num) && this.halfStars && i > num ? 'star-half-full' : 'star';
     }
 

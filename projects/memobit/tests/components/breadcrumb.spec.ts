@@ -1,10 +1,9 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-
-import { MockMemIconComponent } from '../mocks/icon-mock';
 
 import { BreadcrumbComponent } from '../../src/components/breadcrumb/breadcrumb.component';
 import { BreadcrumbOption } from '../../src/components/breadcrumb/types';
+import { MockMemIconComponent } from '../mocks/icon-mock';
 import { RouterLinkDirectiveStub } from '../mocks/router-link-directive';
 
 describe('BreadcrumbComponent', () => {

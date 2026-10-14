@@ -7,8 +7,8 @@ import { Directive, HostListener, Input } from '@angular/core';
     host: { '(click)': 'onClick()' },
 })
 export class RouterLinkDirectiveStub {
-    @Input('routerLink') linkParams: any;
-    navigatedTo: any = null;
+    @Input('routerLink') linkParams: unknown;
+    navigatedTo: unknown = null;
 
     @HostListener('click')
     onClick() {

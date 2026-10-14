@@ -1,16 +1,5 @@
-import {
-    Component,
-    ElementRef,
-    EventEmitter,
-    HostListener,
-    Input,
-    Output,
-    ViewChild,
-    AfterViewInit,
-    OnInit,
-    OnChanges,
-    ChangeDetectionStrategy,
-} from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, EventEmitter, HostListener, Input, OnChanges, Output, ViewChild } from '@angular/core';
+
 import { LightboxItem } from './types';
 
 @Component({

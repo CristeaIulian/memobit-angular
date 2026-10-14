@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 
-import { PaginatorComponent } from './paginator.component';
-import { SelectModule } from '../select';
-import { IconModule } from '../icon';
 import { ButtonModule } from '../../directives/button';
+import { IconModule } from '../icon';
+import { SelectModule } from '../select';
+
+import { PaginatorComponent } from './paginator.component';
+
 @NgModule({
     declarations: [PaginatorComponent],
     exports: [PaginatorComponent],

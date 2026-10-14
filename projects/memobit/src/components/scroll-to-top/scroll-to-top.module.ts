@@ -1,9 +1,11 @@
+import { NgIf } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { ScrollToTopComponent } from './scroll-to-top.component';
-import { IconModule } from '../icon';
-import { NgIf } from '@angular/common';
 import { ButtonModule } from '../../directives/button';
+import { IconModule } from '../icon';
+
+import { ScrollToTopComponent } from './scroll-to-top.component';
+
 @NgModule({
     declarations: [ScrollToTopComponent],
     exports: [ScrollToTopComponent],

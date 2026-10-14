@@ -1,4 +1,4 @@
-import { Component, EventEmitter, forwardRef, Input, OnChanges, OnInit, Output, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, forwardRef, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 interface PaginatorOptions {
@@ -79,12 +79,9 @@ export class PaginatorComponent implements OnInit, OnChanges {
     }
 
     private calculatePaginator(options?: PaginatorOptions): void {
-        // @ts-ignore
-        const currentPage = typeof options.currentPage !== 'undefined' ? options.currentPage : this.currentPage;
-        // @ts-ignore
-        const recordsPerPage = typeof options.recordsPerPage !== 'undefined' ? options.recordsPerPage : this.recordsPerPage;
-        // @ts-ignore
-        const numberOfRecords = typeof options.numberOfRecords !== 'undefined' ? options.numberOfRecords : this.numberOfRecords;
+        const currentPage = options?.currentPage ?? this.currentPage;
+        const recordsPerPage = options?.recordsPerPage ?? this.recordsPerPage;
+        const numberOfRecords = options?.numberOfRecords ?? this.numberOfRecords;
 
         this.recordsFrom = currentPage * recordsPerPage + 1;
         const maxRecordsTo = currentPage * recordsPerPage + recordsPerPage;

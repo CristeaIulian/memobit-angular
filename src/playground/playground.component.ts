@@ -1,6 +1,6 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { SelectedOption } from '@memobit/components/select/types';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { SelectedOption } from '@memobit/components/select/types';
 
 @Component({
     standalone: false,
@@ -32,7 +32,7 @@ export class PlaygroundComponent {
     public myCheckboxes = 'my-test';
 
     public onSelectedItems = (value: SelectedOption): void => {
-        console.log('value');
+        console.log('selected items', value);
     };
 
     public onAddNewItem = (value: string): void => {

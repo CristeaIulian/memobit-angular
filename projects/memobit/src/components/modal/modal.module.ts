@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 
-import { ModalComponent } from './modal.component';
 import { IconModule } from '../icon';
+
+import { ModalComponent } from './modal.component';
+
 @NgModule({
     declarations: [ModalComponent],
     exports: [ModalComponent],

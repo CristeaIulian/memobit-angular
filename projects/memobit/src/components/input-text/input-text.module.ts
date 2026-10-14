@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { InputTextComponent } from './input-text.component';
+
 @NgModule({
     declarations: [InputTextComponent],
     exports: [InputTextComponent],

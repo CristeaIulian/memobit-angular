@@ -1,9 +1,10 @@
+import { NgForOf, NgIf } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { AccordionComponent } from './accordion.component';
-import { NgForOf, NgIf } from '@angular/common';
 import { SafeHtmlModule } from '../../pipes/safehtml';
 import { IconModule } from '../icon';
+
+import { AccordionComponent } from './accordion.component';
 
 @NgModule({
     declarations: [AccordionComponent],

@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ElementRef, ChangeDetectionStrategy } from '@angular/core';
+import { AfterContentInit, ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
 
 @Component({
     standalone: false,

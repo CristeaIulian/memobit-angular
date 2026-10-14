@@ -22,15 +22,13 @@ export class ContextualMenuDirective implements OnDestroy {
     ) {}
 
     @Input() memContextualMenuPreferredPosition: 'above' | 'below' | 'left' | 'right' = 'below';
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    @Input() memContextualMenu?: TemplateRef<any> = undefined;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    @Input() memContextualMenuData?: Record<string, any> = undefined;
+    @Input() memContextualMenu?: TemplateRef<unknown> = undefined;
+    @Input() memContextualMenuData?: Record<string, unknown> = undefined;
 
     public containerMenu?: HTMLDivElement;
     public isMenuCreated = false;
     private routeSubscription?: Subscription;
-    private windowClickListener?: Function;
+    private windowClickListener?: () => void;
 
     public ngOnDestroy(): void {
         if (this.routeSubscription) {
@@ -87,33 +85,32 @@ export class ContextualMenuDirective implements OnDestroy {
     };
 
     private setMenu(): void {
-        this.containerMenu = document.createElement('div');
+        if (!this.memContextualMenu) {
+            return;
+        }
 
-        this.containerMenu.classList.add('mem-contextual-menu');
+        const containerMenu = document.createElement('div');
+        this.containerMenu = containerMenu;
+
+        containerMenu.classList.add('mem-contextual-menu');
 
         this.viewContainerRef.clear();
 
-        // @ts-ignore
         const embeddedView = this.viewContainerRef.createEmbeddedView(this.memContextualMenu, this.memContextualMenuData);
 
         embeddedView.rootNodes.forEach((node): void => {
-            // @ts-ignore
-            this.containerMenu.appendChild(node);
+            containerMenu.appendChild(node);
         });
 
-        document.body.append(this.containerMenu);
+        document.body.append(containerMenu);
 
         setTimeout((): void => {
-            // @ts-ignore
-            const positions = this.getPositions(this.containerMenu.offsetWidth, this.containerMenu.offsetHeight);
+            const positions = this.getPositions(containerMenu.offsetWidth, containerMenu.offsetHeight);
 
-            // @ts-ignore
-            this.containerMenu.style.left = `${positions.left}px`;
-            // @ts-ignore
-            this.containerMenu.style.top = `${positions.top}px`;
+            containerMenu.style.left = `${positions.left}px`;
+            containerMenu.style.top = `${positions.top}px`;
 
-            // @ts-ignore
-            this.containerMenu.style.opacity = '1';
+            containerMenu.style.opacity = '1';
 
             this.isMenuCreated = true;
             this.attachWindowListener();
@@ -137,14 +134,17 @@ export class ContextualMenuDirective implements OnDestroy {
     }
 
     private removeMenu(): void {
-        // @ts-ignore
-        this.containerMenu.style.opacity = '0';
-        // @ts-ignore
-        this.windowClickListener();
+        const containerMenu = this.containerMenu;
+
+        if (!containerMenu) {
+            return;
+        }
+
+        containerMenu.style.opacity = '0';
+        this.windowClickListener?.();
 
         setTimeout((): void => {
-            // @ts-ignore
-            this.containerMenu.remove();
+            containerMenu.remove();
             this.viewContainerRef.clear();
             this.isMenuCreated = false;
         }, 500);

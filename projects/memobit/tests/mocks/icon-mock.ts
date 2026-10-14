@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
     selector: 'mem-icon',
@@ -7,6 +7,6 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
     template: '',
 })
 export class MockMemIconComponent {
-    @Input() icon: any;
-    @Input() size: any;
+    @Input() icon: unknown;
+    @Input() size: unknown;
 }
