@@ -32,12 +32,12 @@ export class InputNumberComponent implements ControlValueAccessor, OnChanges {
         }
     }
 
-    // The form control receives the raw input text; the inputNumber output emits it as a number.
-    public onChange: (value: string) => void = (): void => {};
+    // An empty field reports null to the form rather than 0.
+    public onChange: (value: number | null) => void = (): void => {};
 
     public onTouch: () => void = (): void => {};
 
-    public registerOnChange(fn: (value: string) => void): void {
+    public registerOnChange(fn: (value: number | null) => void): void {
         this.onChange = fn;
     }
 
@@ -51,7 +51,7 @@ export class InputNumberComponent implements ControlValueAccessor, OnChanges {
 
     public onInputChange($event: Event): void {
         const newValue = (<HTMLInputElement>$event.target).value;
-        this.onChange(newValue);
+        this.onChange(newValue === '' ? null : Number(newValue));
         this.inputNumber.emit(Number(newValue));
     }
 
