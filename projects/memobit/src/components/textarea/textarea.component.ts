@@ -30,19 +30,15 @@ export class TextareaComponent implements ControlValueAccessor, OnChanges {
         }
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public onChange: any = (): void => {};
+    public onChange: (value: string) => void = (): void => {};
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public onTouch: any = (): void => {};
+    public onTouch: () => void = (): void => {};
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public registerOnChange(fn: any): void {
+    public registerOnChange(fn: (value: string) => void): void {
         this.onChange = fn;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public registerOnTouched(fn: any): void {
+    public registerOnTouched(fn: () => void): void {
         this.onTouch = fn;
     }
 
