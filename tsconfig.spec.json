@@ -6,7 +6,7 @@
     "moduleResolution": "bundler",
     "types": ["node", "jest"]
   },
-  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"],
+  "include": ["projects/memobit/tests/**/*.ts", "setup-jest.ts"],
   "angularCompilerOptions": {
     "extendedDiagnostics": {
       "checks": {

@@ -28,5 +28,12 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.spec.json" },
+    { "path": "./projects/memobit/tsconfig.lib.json" },
+    { "path": "./projects/memobit/tsconfig.spec.json" }
+  ]
 }
