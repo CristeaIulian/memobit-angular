@@ -19,7 +19,8 @@
   "overrides": {
     "fast-uri@3": "3.1.8",
     "js-yaml": "4.3.2",
-    "postcss": "8.5.28"
+    "postcss": "8.5.28",
+    "vite": "8.3.3"
   },
   "dependencies": {
     "@angular/animations": "22.2.0",
